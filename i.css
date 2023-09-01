@@ -62,8 +62,8 @@ p{
     }
 
     .progress{ 
-        width: 380px;
-        height: 100px;
+        width: 350px;
+        height: 80px;
         position: relative;
         margin-bottom: 50px;
     }
@@ -71,7 +71,7 @@ p{
         position: absolute;
         top: 5%;
         width: 200px;
-        height: 90px;
+        height: 70px;
         left: 1%;
     }
 }
