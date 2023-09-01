@@ -1,0 +1,46 @@
+*{ 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+.container{ 
+    width: 100%;
+    background: white;  
+    height: 100vh;
+    color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+h1{ 
+    font-size: 50px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-bottom: 120px; 
+    color:#343434; 
+}
+p{ 
+   color: #343434;
+    font-size: bold;
+    margin-bottom: 50px;
+    font-size: 35px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+.progress{ 
+    width: 600px;
+    height: 100px;
+    background-color: #343434;
+    position: relative;
+    margin-bottom: 50px;
+}
+.progress-inner{ 
+    background-color: #00f047;
+    position: absolute;
+    top: 5%;
+    width: 200px;
+    height: 90px;
+    left: 1%;
+
+}
