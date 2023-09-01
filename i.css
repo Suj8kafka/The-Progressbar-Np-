@@ -62,14 +62,12 @@ p{
     }
 
     .progress{ 
-        width: 400px;
+        width: 380px;
         height: 100px;
-        background-color: #343434;
         position: relative;
         margin-bottom: 50px;
     }
     .progress-inner{ 
-        background-color: #00f047;
         position: absolute;
         top: 5%;
         width: 200px;
