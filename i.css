@@ -2,8 +2,10 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    
 
 }
+
 .container{ 
     width: 100%;
     background: white;  
@@ -43,4 +45,35 @@ p{
     height: 90px;
     left: 1%;
 
+}
+
+@media screen  and (max-width: 600px) {
+
+    h1{ 
+        font-size: 35px;
+        line-height: 50px;
+    }
+    p{ 
+        
+         font-size: bold;
+         margin-bottom: 15px;
+         font-size:17px;
+         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+
+    .progress{ 
+        width: 400px;
+        height: 100px;
+        background-color: #343434;
+        position: relative;
+        margin-bottom: 50px;
+    }
+    .progress-inner{ 
+        background-color: #00f047;
+        position: absolute;
+        top: 5%;
+        width: 200px;
+        height: 90px;
+        left: 1%;
+    }
 }
