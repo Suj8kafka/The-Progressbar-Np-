@@ -44,7 +44,7 @@ const progressBar= document.querySelector('.progress-inner');
                 total2+= 1; 
                 
                 let  ruunningSecs= (total2/totalSecsYears) *100;
-                
+                    ruunningSecs=ruunningSecs.toFixed(8)
                 console.log(ruunningSecs, total2); 
                 
                  
