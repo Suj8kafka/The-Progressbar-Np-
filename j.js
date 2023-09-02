@@ -17,50 +17,58 @@ const progressBar= document.querySelector('.progress-inner');
                 //     timeSpan.innerHTML= "Game OVer!"
                 // }
                 //   }, 1000);
-                function d(){ 
-     var currdate = 141; 
-     var r= new  Date(); 
-     let hours = r.getHours(); 
-     let minutes= r.getMinutes(); 
-     let sec= r.getSeconds(); 
-     let totalSecondsCurrdate= currdate*24*60*60;
-     let runningSecs= hours*minutes*sec;
-     let DynamicSeconds= totalSecondsCurrdate+ runningSecs  
-     let ActualPercentage= DynamicSeconds/(365*24*60*60)* 100; 
-     
-     //console.log(hours, minutes, sec,"The Actual Running Time in Seconds", runningSecs); 
-     ActualPercentage= ActualPercentage.toFixed(5)
-     //console.log(ActualPercentage)
-     if(hours>=23 && minutes>=59){ 
-         currdate+=1; 
-         
-        }
-        
-        
-        progressBar.style.width= ActualPercentage+"%"; 
-        timeSpan.innerHTML= ActualPercentage+ '%'; 
-    checkColors(ActualPercentage); 
-    }
-    
-    setInterval(() => {
-        d(); 
-        
-    }, 1);
+                var numpy= 0; 
+                var gate= 141; 
+                var datee= new Date(); 
+                hour= datee.getHours(); 
+                mins= datee.getMinutes(); 
+                sec= datee.getSeconds();
+                var CompletedTotal= (hour-1)*60*60; 
+                var total1= hour*mins*sec+(CompletedTotal); 
+                
+                // function diss(){
+                
+                //     return total1; 
+                //     //console.log(total1); 
+                
+                // }
+                
+                
+                var CurrentDay= 141
+                var CurrSeconds= CurrentDay*24*60*60; 
+                var total2 = CurrSeconds+total1; 
+                //const Duck= diss(); 
+                setInterval(() => {
+                //let numpy = 1; 
+                let totalSecsYears= 31536000; 
+                total2+= 1; 
+                
+                let  ruunningSecs= (total2/totalSecsYears) *100;
+                
+                console.log(ruunningSecs, total2); 
+                
+                 
+                progressBar.style.width= ruunningSecs+"%"; 
+                timeSpan.innerHTML= ruunningSecs+ '%'; 
+                checkColors(ActualPercentage); 
 
-//})
-
-const checkColors = (width)=> { 
-    if (width> 50 && width<80){ 
-        progressBar.style.background= "yellow"; 
-
-    }else if (width>80 )
-{
-    progressBar.style.background= "red"; 
-}
-
-}
-
-
+                //let ActualProgressYears= (ruunningSecs/totalSecsYears) *1;
+                //console.log(ActualProgressYears);  
+                
+            }, 1000);
+            
+            
+            
+            const checkColors = (width)=> { 
+                if (width> 50 && width<80){ 
+                    progressBar.style.background= "yellow"; 
+            
+                }else if (width>80 )
+            {
+                progressBar.style.background= "red"; 
+            }
+            
+            }
 
 
 
