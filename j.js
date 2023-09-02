@@ -24,6 +24,16 @@ const progressBar= document.querySelector('.progress-inner');
                 mins= datee.getMinutes(); 
                 sec= datee.getSeconds();
                 var CompletedTotal= (hour-1)*60*60; 
+                if(hour ==0){ 
+                  hour=24; 
+                } 
+                if(mins ==0) { 
+                  mins = 60; 
+                } 
+                if (sec==0) { 
+                sec= 60; 
+                } 
+
                 var total1= hour*mins*sec+(CompletedTotal); 
                 
                 // function diss(){
