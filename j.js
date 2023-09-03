@@ -1,90 +1,8 @@
-// const btnStart= document.querySelector('.btn-start'); 
-// const timeSpan= document.querySelector('.time'); 
-// const progressBar= document.querySelector('.progress-inner'); 
-
-
-// //btnStart.addEventListener("click", ()=> { 
-  
-//     //let interval =0 ; 
-//    // var countDown = setInterval(() => {
-//       //  interval++; 
-//        // let progressWidth =(interval/10)* 100; 
-//         //if (interval<=100){ 
-//             // }
-//             // else{ 
-//                 //     clearInterval(countDown)
-//                 //     progressBar.style.width="0%"; 
-//                 //     timeSpan.innerHTML= "Game OVer!"
-//                 // }
-//                 //   }, 1000);
-//                 var numpy= 0; 
-//                 var gate= 142; 
-//                 var datee= new Date(); 
-//                 hour= datee.getHours(); 
-//                 mins= datee.getMinutes(); 
-//                 sec= datee.getSeconds();
-//                 var CompletedTotal= (hour-1)*60*60; 
-//                 if(hour ==0){ 
-//                   hour=24; 
-//                 } 
-//                 if(mins ==0) { 
-//                   mins = 60; 
-//                 } 
-//                 if (sec==0) { 
-//                 sec= 60; 
-//                 } 
-
-//                 var total1= hour*mins*sec+(CompletedTotal); 
-                
-//                 // function diss(){
-                
-//                 //     return total1; 
-//                 //     //console.log(total1); 
-                
-//                 // }
-                
-                
-//                 var CurrentDay= 141
-//                 var CurrSeconds= CurrentDay*24*60*60; 
-//                 var total2 = CurrSeconds+total1; 
-//                 //const Duck= diss(); 
-//                 setInterval(() => {
-//                 //let numpy = 1; 
-//                 let totalSecsYears= 31536000; 
-//                 total2+= 1; 
-                
-//                 let  ruunningSecs= (total2/totalSecsYears) *100;
-//                     ruunningSecs=ruunningSecs.toFixed(8)
-//                 console.log(ruunningSecs, total2); 
-                
-                 
-//                 progressBar.style.width= ruunningSecs+"%"; 
-//                 timeSpan.innerHTML= ruunningSecs+ '%'; 
-//                 checkColors(ActualPercentage); 
-
-//                 //let ActualProgressYears= (ruunningSecs/totalSecsYears) *1;
-//                 //console.log(ActualProgressYears);  
-                
-//             }, 1000);
-            
-            
-            
-//             const checkColors = (width)=> { 
-//                 if (width> 50 && width<80){ 
-//                     progressBar.style.background= "yellow"; 
-            
-//                 }else if (width>80 )
-//             {
-//                 progressBar.style.background= "red"; 
-//             }
-            
-//             }
-
-
-
 const btnStart= document.querySelector('.btn-start'); 
 const timeSpan= document.querySelector('.time'); 
 const progressBar= document.querySelector('.progress-inner'); 
+const DayPerentage= document.querySelector('.percentageofDay'); 
+const ProgressofDay= document.querySelector('.progressInn')
 
 
 //btnStart.addEventListener("click", ()=> { 
@@ -101,7 +19,37 @@ const progressBar= document.querySelector('.progress-inner');
                 //     timeSpan.innerHTML= "Game OVer!"
                 // }
                 //   }, 1000);
+
+                
+                
                 setInterval(() => {
+                    
+                                    const current_Date = new Date();
+                                    
+                                    // Get the start of the day
+                                    const startOf_Day = new Date(current_Date.getFullYear(), current_Date.getMonth(), current_Date.getDate());
+                                    
+                                    // Get the end of the day
+                                    const endOf_Day = new Date(current_Date.getFullYear(), current_Date.getMonth(), current_Date.getDate() + 1);
+                                    
+                                    // Calculate the total number of milliseconds in the day
+                                    const total_Time = endOf_Day.getTime() - startOf_Day.getTime();
+                                    
+                                    // Calculate the number of milliseconds elapsed from the start of the day to the current time
+                                    const elapsed_Time = current_Date.getTime() - startOf_Day.getTime();
+                                    
+                                    // Calculate the percentage of the day that has passed
+                                    const percentage_1 = (elapsed_Time / total_Time) * 100;
+                                    
+                                    // Round the percentage to two decimal places
+                                    const rounded_Percentage = percentage_1.toFixed(5);
+                                    
+                                    // Output the result
+                                    //console.log(`Current day progress: ${roundedPercentage}%`);
+                                ProgressofDay.style.width=rounded_Percentage + "%"
+                                DayPerentage.innerHTML= rounded_Percentage+ "%"; 
+                                CheckColours(rounded_Percentage); 
+                                
                     
                     const currentDate = new Date();
                     
@@ -133,7 +81,7 @@ const progressBar= document.querySelector('.progress-inner');
                 
                 progressBar.style.width= RealTimePercentage +"%"; 
                 timeSpan.innerHTML= RealTimePercentage+ '%'; 
-                checkColors(realtimeClock); 
+                checkColors(RealTimePercentage); 
                 
                 //let ActualProgressYears= (ruunningSecs/totalSecsYears) *1;
                 //console.log(ActualProgressYears);  
@@ -153,5 +101,13 @@ const progressBar= document.querySelector('.progress-inner');
                 
             }
 
+            const CheckColours = (width1)=> { 
+                if (width1> 50 && width1<80){ 
+                    ProgressofDay.style.background= "yellow"; 
             
-            
+                }else if (width1>80 )
+                {
+                    ProgressofDay.style.background= "red"; 
+                
+            }
+        } 
