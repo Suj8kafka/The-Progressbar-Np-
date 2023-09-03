@@ -18,7 +18,7 @@ const progressBar= document.querySelector('.progress-inner');
                 // }
                 //   }, 1000);
                 var numpy= 0; 
-                var gate= 141; 
+                var gate= 142; 
                 var datee= new Date(); 
                 hour= datee.getHours(); 
                 mins= datee.getMinutes(); 
