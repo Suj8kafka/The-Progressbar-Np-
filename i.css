@@ -89,7 +89,11 @@ h2{
     top: 4%;
     left: 1%;
 }
-/* Custom Animation  */
+
+
+
+
+/* Custom Animation  for large Devices*/
 .SmallContainer:hover> h2{ 
     color: black;
     transition: .5s;
@@ -162,27 +166,82 @@ h2{
     transition: .6s; 
 
 }
+
+
+
 /* Mini Progressbar responsive */
 @media screen  and (max-width: 800px) {
 
 .SmallContainer{ 
-    height: auto;
+    height: 25vh;
         background: rgb(166, 234, 255);
         color: whitesmoke;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        border-radius: 70px;
+        
 }
+.SmallContainer:hover{ 
+    height: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 70px;
+    transition: .5s;
+}
+.SmallContainer:hover> .progressLarge{ 
+    position: relative;
+    border-radius: 20px;
+    background-color: black;
+    width: 150px;
+    Height: 40px;
+    position: relative;
+    margin-bottom: 25px;
+}
+.SmallContainer:hover> .progressLarge .progressInn{ 
+    border-radius: 15px;
+    color: black;
+    position: absolute;
+        width: 144px;
+        height: 35px;
+        top: 5%;
+        left: 2%;
+}
+
 .container{ 
+    background: rgb(255, 204, 66);
+    color: wheat;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 70vh;
+}
+.container:hover{ 
     background: rgb(255, 204, 66);
     border-radius: 70px;
     color: wheat;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 75vh;
+    height: 70vh;
+}
+.container:hover> .progress{
+    width: 350px;
+    height: 80px;
+    position: relative;
+    margin-bottom: 50px;
+    border-radius: 20px;
+}
+.container:hover> .progress .progress-inner{ 
+    position: absolute;
+    top: 5%;
+    width: 344px;
+    height: 70px;
+    left: 1%;
+    border-radius: 19px;
+   
 }
 
     h2{ 
@@ -200,7 +259,7 @@ h2{
         height: 40px;
         position: relative;
         margin-bottom: 25px;
-        border-radius: 17px;
+    
 
     }
     .progressInn{ 
@@ -209,7 +268,7 @@ h2{
         height: 35px;
         top: 5%;
         left: 2%;
-        border-radius: 15px;
+        
     }
 
     h1{ 
@@ -229,7 +288,7 @@ h2{
         height: 80px;
         position: relative;
         margin-bottom: 50px;
-        border-radius: 20px;
+  
     }
     .progress-inner{ 
         position: absolute;
@@ -237,7 +296,7 @@ h2{
         width: 344px;
         height: 70px;
         left: 1%;
-        border-radius: 19px;
+        
     }
    html,body{ 
     height: 100%; 
@@ -246,4 +305,6 @@ h2{
     padding: 0;
     overflow-x: hidden;
    }
+
+   
 }
