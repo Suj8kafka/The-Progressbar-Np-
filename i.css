@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     
-
+    
 }
 
 .container{ 
@@ -30,17 +30,34 @@ h1{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     
 }
+.progress{ 
+    width: 600px;
+    height: 100px;
+    background-color: #343434;
+    position: relative;
+    margin-bottom: 50px;
+}
+.progress-inner{ 
+    background-color: #00f047;
+    position: absolute;
+    top: 5%;
+    width: 590px;
+    height: 90px;
+    left: 1%;
+
+}
+
 /* Mini Progressbar  */
 .SmallContainer{ 
     width: 100%;
     background: white;
     height: 25vh;
-    color: white;
+    color: whitesmoke;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
+    
 }
 h2{ 
     font-size: 20px;
@@ -67,29 +84,61 @@ h2{
 .progressInn{ 
     background-color: #00f047;
     position:absolute; 
-    width: 100px;
+    width: 294px;
     height: 45px;
     top: 4%;
     left: 1%;
 }
-.progress{ 
-    width: 600px;
-    height: 100px;
-    background-color: #343434;
-    position: relative;
-    margin-bottom: 50px;
-}
-.progress-inner{ 
-    background-color: #00f047;
-    position: absolute;
-    top: 5%;
-    width: 200px;
-    height: 90px;
-    left: 1%;
-
-}
 
 @media screen  and (max-width: 800px) {
+
+    /* Mini Progressbar responsive */
+.SmallContainer{ 
+    height: auto;
+        background: rgb(166, 234, 255);
+        color: whitesmoke;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 70px;
+}
+.container{ 
+    background: rgb(255, 204, 66);
+    border-radius: 70px;
+    color: wheat;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 75vh;
+}
+
+    h2{ 
+        font-size: 30px;
+        line-height: 25px;
+
+    }
+    .small{ 
+        font-size: small;
+        margin-bottom: 5px;
+        font-size: 15px;
+    }
+    .progressLarge{ 
+        width: 150px;
+        height: 40px;
+        position: relative;
+        margin-bottom: 25px;
+        border-radius: 17px;
+
+    }
+    .progressInn{ 
+        position: absolute;
+        width: 144px;
+        height: 35px;
+        top: 5%;
+        left: 2%;
+        border-radius: 15px;
+    }
 
     h1{ 
         font-size: 35px;
@@ -108,13 +157,15 @@ h2{
         height: 80px;
         position: relative;
         margin-bottom: 50px;
+        border-radius: 20px;
     }
     .progress-inner{ 
         position: absolute;
         top: 5%;
-        width: 340px;
+        width: 344px;
         height: 70px;
         left: 1%;
+        border-radius: 19px;
     }
    html,body{ 
     height: 100%; 
