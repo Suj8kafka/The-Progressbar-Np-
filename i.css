@@ -9,7 +9,7 @@
 .container{ 
     width: 100%;
     background: white;  
-    height: 80vh;
+    height: 75vh;
     color: whitesmoke;
     display: flex;
     align-items: center;
@@ -89,10 +89,82 @@ h2{
     top: 4%;
     left: 1%;
 }
+/* Custom Animation  */
+.SmallContainer:hover> h2{ 
+    color: black;
+    transition: .5s;
+}
+.SmallContainer:hover>  p{ 
+    color: black;
+    transition: .5s;
+}
+.SmallContainer:hover { 
+        width: 100%;
+        background: rgb(166, 234, 255);
+        height: 25vh;
+        color: whitesmoke;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 70px;
+        transition: .5s;
 
+}
+.SmallContainer:hover> .progressLarge{ 
+    width: 300px;
+    height: 50px;
+    background-color: black;
+    position: relative;
+    margin-bottom:1px ;
+    transition: .6s;
+    border-radius: 25px;
+}
+
+.SmallContainer:hover>  .progressLarge .progressInn{ 
+    background-color: #00f047;
+    position:absolute; 
+    width: 294px;
+    height: 45px;
+    top: 4%;
+    left: 1%;
+    border-radius: 20px ;
+    transition: .6s;
+} 
+.container:hover{ 
+    width: 100%;
+    background:  rgb(255, 204, 66);  
+    height: 75vh;
+    color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 200px;
+    transition: .6s;
+}
+.container:hover > .progress{ 
+    border-radius: 40px;
+    background-color: black;
+    transition: .7s;
+
+}
+.container:hover> .progress .progress-inner{ 
+    border-radius: 35px;
+    transition: .7s;
+}
+.container:hover> p{
+     color: black;
+     transition: .6s;
+}
+.container:hover> h1 {
+    color: black;
+    transition: .6s; 
+
+}
+/* Mini Progressbar responsive */
 @media screen  and (max-width: 800px) {
 
-    /* Mini Progressbar responsive */
 .SmallContainer{ 
     height: auto;
         background: rgb(166, 234, 255);
