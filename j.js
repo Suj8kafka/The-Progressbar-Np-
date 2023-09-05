@@ -90,11 +90,11 @@ const ProgressofDay= document.querySelector('.progressInn')
                      icon.onclick=function(){ 
                         document.body.classList.toggle("dark-theme");
                         if(document.body.classList.contains("dark-theme")){ 
-                            icon.src="Icons/sun.png"; 
+                            icon.src="sun.png"; 
                             
                         }else
                             { 
-                                icon.src="Icons/moon.png"; 
+                                icon.src="moon.png"; 
                             }
                          
                      }   
