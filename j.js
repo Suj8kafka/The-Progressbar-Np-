@@ -86,6 +86,18 @@ const ProgressofDay= document.querySelector('.progressInn')
                      //let ActualProgressYears= (ruunningSecs/totalSecsYears) *1;
                      //console.log(ActualProgressYears);  
                      
+                     var icon= document.getElementById("icons"); 
+                     icon.onclick=function(){ 
+                        document.body.classList.toggle("dark-theme");
+                        if(document.body.classList.contains("dark-theme")){ 
+                            icon.src="Icons/sun.png"; 
+                            
+                        }else
+                            { 
+                                icon.src="Icons/moon.png"; 
+                            }
+                         
+                     }   
                     }, 500);          
                     
                     
