@@ -1,9 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Inter&family=Poppins:wght@300&family=Roboto&family=Ubuntu&family=Varela+Round&display=swap');
+
+
 *{ 
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     
     
+}
+footer{ 
+    font-family: 'Poppins', sans-serif;
+    font-weight: 550;
+    background-color: #373737;
+  
+   
+    height: fit-content;
+    border-radius: 30px 30px 0 0;
+    color: var(--primary-color);
+      
+}
+.box .content{ 
+    margin: 20px 0 0 0 ;
+    position: relative; 
+}
+.box .content:before{ 
+    position: absolute; 
+    content: '';
+    top: -10px;
+    height: 2px;
+    width: 100%;
+    background-color: #373737;
+}
+.box .content:after{ 
+    position: absolute; 
+    content: '';
+    height: 2px;
+    width: 15%;
+    background-color: #f12020;
+    top: -40px;
+}
+
+.mainContent{ 
+    display: flex;
+
+}
+.mainContent .leftBox{ 
+    flex-basis: 50%;
+    padding: 10px 20px;
+
+}
+.hack{ 
+    color: white;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    
+}
+
+.CenterBox .content .fa-solid{ 
+    font-size: 1.4375rem;
+    background-color: #1a1a1a;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 40px;
+    transition: .3s ease;
+    cursor: pointer;
+}
+.CenterBox .content .fa-solid:hover{ 
+    background-color: #00f047;
+}
+
+.CenterBox .content .text{ 
+    font-size: 1.0625rem;
+    font-weight: 500;
+    padding-left: 10px;
+
+}
+.CenterBox .content .Phone{ 
+    margin: 10px 0 ;
+}
+.rightBox form .msg{
+    margin-top: 10px;
+
+
+}
+.rightBox form input, .rightBox form textarea{ 
+    width: 100%;
+    font-size: 1.0625rem;
+    background: #151515;
+    padding-left: 10px;
+    border: 1px solid #222222;
+}
+.rightBox form .btn{ 
+    margin-top: 10px;
+}
+.rightBox form .btn button{ 
+    height: 40px;
+    width: 30%;
+    position: relative;
+    left:35%;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    color: antiquewhite;
+    background-color: #151515;
+    transition: .3s ease;
+    font-weight: 500;
+}
+.rightBox form .btn button:hover{ 
+    color: #343434;
+    background-color: #00f047;
+}
+
+.rightBox form input:focus, 
+.rightBox form textarea:focus{ 
+    outline-color: #3498db;
+}
+.right form input{ 
+    height: 35px;
+}
+.leftBox .content{ 
+    margin: 20px 0 0 0 ;
+}
+.leftBox .content .social { 
+    margin: 20px 0 0 0 ;
+}
+.leftBox .content .social a{ 
+    padding: 0 2px;
+}
+.leftBox .content .social a span{ 
+    height: 40px;
+    width: 40px;
+    background: #1a1a1a ;
+    line-height: 40px;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    border-radius: 10px;
+    transition: .5s;
+    
+}
+.leftBox .content .social{ 
+    position: relative;
+    align-items: center;
+}
+.leftBox .content .social a span:hover{ 
+    background: rgb(255, 86, 86);
+}
+.bottom center{ 
+    padding: 5px;
+    font-size: 1rem;
+    background-color: #151515;
+
+
+}
+.bottom center span{ 
+    color: #656565;
+}
+.bottom center a{ 
+    color: #55dd00;
+    text-decoration: none;
+}
+.bottom center a:hover{ 
+    text-decoration: underline;
+}
+.bottom center .fa-solid{ 
+    font-size: large;
+    height: 20px;
+    width: 20px;
+     
 }
 :root{ 
     --primary-color: #ffffff;
@@ -39,6 +206,7 @@ transition: .8s;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    transition: .5s ease;
 }
 h1{ 
     font-size: 50px;
@@ -62,6 +230,7 @@ h1{
     background-color: var(--tertiary-color);
     position: relative;
     margin-bottom: 50px;
+    transition: .5s ease;
 }
 .progress-inner{ 
     background-color: #00f047;
@@ -70,6 +239,7 @@ h1{
     width: 590px;
     height: 90px;
     left: 1%;
+    transition: .5s ease;
 
 }
 
@@ -83,6 +253,8 @@ h1{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    transition: .5s ease;
+    border-radius: 70px;
     
 }
 h2{ 
@@ -104,6 +276,7 @@ h2{
     background-color: var(--tertiary-color);
     position: relative;
     margin-bottom:1px ;
+    transition: .5s ease;
 }
 .progressInn{ 
     background-color: #00f047;
@@ -112,6 +285,7 @@ h2{
     height: 45px;
     top: 4%;
     left: 1%;
+    transition: .5s ease;
 }
 
 
@@ -120,7 +294,7 @@ h2{
 /* Custom Animation  for large Devices*/
 .SmallContainer:hover> h2{ 
     color: black;
-    transition: .5s;
+    
 }
 .SmallContainer:hover>  p{ 
     color: black;
@@ -135,8 +309,6 @@ h2{
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        border-radius: 70px;
-        transition: .5s;
 
 }
 .SmallContainer:hover> .progressLarge{ 
@@ -145,7 +317,6 @@ h2{
     background-color: black;
     position: relative;
     margin-bottom:1px ;
-    transition: .6s;
     border-radius: 25px;
 }
 
@@ -158,7 +329,6 @@ h2{
     left: 1%;
     /* top right bottom left */
     border-radius: 20px;
-    transition: .6s;
 } 
 .container:hover{ 
     width: 100%;
@@ -170,17 +340,17 @@ h2{
     justify-content: center;
     flex-direction: column;
     border-radius: 200px;
-    transition: .6s;
+   
 }
 .container:hover > .progress{ 
     border-radius: 40px;
     background-color: black;
-    transition: .7s;
+    
 
 }
 .container:hover> .progress .progress-inner{ 
     border-radius: 35px;
-    transition: .7s;
+    
 }
 .container:hover> p{
      color: black;
