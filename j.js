@@ -98,8 +98,19 @@ const ProgressofDay= document.querySelector('.progressInn')
                             }
                          
                      }   
+                     //Website total Visitor Counter 
+                     
                     }, 500);          
-                    
+                    // Retrieve the visitor count from local storage or initialize it to 0
+let count = localStorage.getItem('visitorCount') || 0;
+
+// Update the counter element on the page
+const counterElement = document.getElementById('counter');
+counterElement.textContent = count;
+
+// Increment the visitor count and update the counter
+count++;
+localStorage.setItem('visitorCount', count);
                     
                     
                     const checkColors = (width)=> { 
