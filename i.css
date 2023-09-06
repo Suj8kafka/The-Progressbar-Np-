@@ -11,13 +11,24 @@
 footer{ 
     font-family: 'Poppins', sans-serif;
     font-weight: 550;
-    background-color: #373737;
-  
-   
+    background-color: var(--primary-color);
     height: fit-content;
     border-radius: 30px 30px 0 0;
-    color: var(--primary-color);
+    color: var(--secondary-color);
       
+}
+:root{ 
+    --primary-color: #ffffff;
+    --secondary-color :#373737;
+    --tertiary-color:#343434;  
+} 
+
+ 
+.dark-theme{ 
+    --primary-color:#373737; 
+    --secondary-color:rgb(255, 255, 255); 
+    --tertiary-color:black; 
+    
 }
 .box .content{ 
     margin: 20px 0 0 0 ;
@@ -50,8 +61,8 @@ footer{
 
 }
 .hack{ 
-    color: white;
-    font-weight: 700;
+    color: var(--secondary-color);
+    font-weight: 800;
     font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
     
@@ -60,6 +71,7 @@ footer{
 .CenterBox .content .fa-solid{ 
     font-size: 1.4375rem;
     background-color: #1a1a1a;
+    color: #ffffff;
     height: 40px;
     width: 40px;
     line-height: 40px;
@@ -89,7 +101,7 @@ footer{
 .rightBox form input, .rightBox form textarea{ 
     width: 100%;
     font-size: 1.0625rem;
-    background: #151515;
+    background: #ffffff;
     padding-left: 10px;
     border: 1px solid #222222;
 }
@@ -118,8 +130,8 @@ footer{
 .rightBox form textarea:focus{ 
     outline-color: #3498db;
 }
-.right form input{ 
-    height: 35px;
+.rightBox form input{ 
+    height: 30px;
 }
 .leftBox .content{ 
     margin: 20px 0 0 0 ;
@@ -139,15 +151,15 @@ footer{
     font-size: 18px;
     color: white;
     border-radius: 10px;
-    transition: .5s;
-    
+    transition: .5s ease;  
 }
+
 .leftBox .content .social{ 
     position: relative;
     align-items: center;
 }
 .leftBox .content .social a span:hover{ 
-    background: rgb(255, 86, 86);
+    background: #00f047;
 }
 .bottom center{ 
     padding: 5px;
@@ -172,19 +184,7 @@ footer{
     width: 20px;
      
 }
-:root{ 
-    --primary-color: #ffffff;
-    --secondary-color :#373737;
-    --tertiary-color:#343434;  
-} 
 
- 
-.dark-theme{ 
-    --primary-color:#373737; 
-    --secondary-color:rgb(255, 255, 255); 
-    --tertiary-color:black; 
-    
-}
 #icons{ 
     width: 30px;
     cursor: pointer;
@@ -254,7 +254,7 @@ h1{
     justify-content: center;
     flex-direction: column;
     transition: .5s ease;
-    border-radius: 70px;
+    
     
 }
 h2{ 
@@ -309,6 +309,8 @@ h2{
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        border-radius: 70px;
+        
 
 }
 .SmallContainer:hover> .progressLarge{ 
@@ -329,6 +331,7 @@ h2{
     left: 1%;
     /* top right bottom left */
     border-radius: 20px;
+   
 } 
 .container:hover{ 
     width: 100%;
