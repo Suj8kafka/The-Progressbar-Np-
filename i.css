@@ -22,6 +22,15 @@ footer{
     --secondary-color :#373737;
     --tertiary-color:#343434;  
 } 
+#visitors{ 
+    color: var(--secondary-color);
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    position: relative;
+    left: 0%;
+    margin-bottom: 20px;
+
+}
 
  
 .dark-theme{ 
@@ -213,8 +222,7 @@ h1{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     margin-bottom: 120px; 
     color:var(--secondary-color);
-    outline: none;
-    border: none;
+    font-weight: lighter;
 }
 .large{ 
     color: var(--secondary-color);
@@ -261,6 +269,7 @@ h2{
     font-size: 20px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     margin-bottom: 60px;
+    font-weight: lighter;
     color: var(--secondary-color);
 }
 .small{ 
