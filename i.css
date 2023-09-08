@@ -542,3 +542,15 @@ footer{
 }
 
 }
+@media screen and (max-width: 500px) {
+  .progressInn{ 
+    background-color: #00f047;
+    position:relative; 
+    width: 100%px;
+    height: 30px;
+    top: 4%;
+    left: 1%;
+    transition: .5s ease;
+}
+
+}
