@@ -8,19 +8,11 @@
     
     
 }
-footer{ 
-    font-family: 'Poppins', sans-serif;
-    font-weight: 550;
-    background-color: var(--primary-color);
-    height: fit-content;
-    border-radius: 30px 30px 0 0;
-    color: var(--secondary-color);
-      
-}
+
 :root{ 
     --primary-color: #ffffff;
     --secondary-color :#373737;
-    --tertiary-color:#343434;  
+    --tertiary-color:#373737;  
 } 
 #visitors{ 
     color: var(--secondary-color);
@@ -38,160 +30,6 @@ footer{
     --secondary-color:rgb(255, 255, 255); 
     --tertiary-color:black; 
     
-}
-.box .content{ 
-    margin: 20px 0 0 0 ;
-    position: relative; 
-}
-.box .content:before{ 
-    position: absolute; 
-    content: '';
-    top: -10px;
-    height: 2px;
-    width: 100%;
-    background-color: #373737;
-}
-.box .content:after{ 
-    position: absolute; 
-    content: '';
-    height: 2px;
-    width: 15%;
-    background-color: #f12020;
-    top: -40px;
-}
-
-.mainContent{ 
-    display: flex;
-
-}
-.mainContent .leftBox{ 
-    flex-basis: 50%;
-    padding: 10px 20px;
-
-}
-.hack{ 
-    color: var(--secondary-color);
-    font-weight: 800;
-    font-family: 'Poppins', sans-serif;
-    text-transform: uppercase;
-    
-}
-
-.CenterBox .content .fa-solid{ 
-    font-size: 1.4375rem;
-    background-color: #1a1a1a;
-    color: #ffffff;
-    height: 40px;
-    width: 40px;
-    line-height: 40px;
-    text-align: center;
-    border-radius: 40px;
-    transition: .3s ease;
-    cursor: pointer;
-}
-.CenterBox .content .fa-solid:hover{ 
-    background-color: #00f047;
-}
-
-.CenterBox .content .text{ 
-    font-size: 1.0625rem;
-    font-weight: 500;
-    padding-left: 10px;
-
-}
-.CenterBox .content .Phone{ 
-    margin: 10px 0 ;
-}
-.rightBox form .msg{
-    margin-top: 10px;
-
-
-}
-.rightBox form input, .rightBox form textarea{ 
-    width: 100%;
-    font-size: 1.0625rem;
-    background: #ffffff;
-    padding-left: 10px;
-    border: 1px solid #222222;
-}
-.rightBox form .btn{ 
-    margin-top: 10px;
-}
-.rightBox form .btn button{ 
-    height: 40px;
-    width: 30%;
-    position: relative;
-    left:35%;
-    border-radius: 50%;
-    border: none;
-    outline: none;
-    color: antiquewhite;
-    background-color: #151515;
-    transition: .3s ease;
-    font-weight: 500;
-}
-.rightBox form .btn button:hover{ 
-    color: #343434;
-    background-color: #00f047;
-}
-
-.rightBox form input:focus, 
-.rightBox form textarea:focus{ 
-    outline-color: #3498db;
-}
-.rightBox form input{ 
-    height: 30px;
-}
-.leftBox .content{ 
-    margin: 20px 0 0 0 ;
-}
-.leftBox .content .social { 
-    margin: 20px 0 0 0 ;
-}
-.leftBox .content .social a{ 
-    padding: 0 2px;
-}
-.leftBox .content .social a span{ 
-    height: 40px;
-    width: 40px;
-    background: #1a1a1a ;
-    line-height: 40px;
-    text-align: center;
-    font-size: 18px;
-    color: white;
-    border-radius: 10px;
-    transition: .5s ease;  
-}
-
-.leftBox .content .social{ 
-    position: relative;
-    align-items: center;
-}
-.leftBox .content .social a span:hover{ 
-    background: #00f047;
-}
-.bottom center{ 
-    padding: 5px;
-    font-size: 1rem;
-    background-color: #151515;
-
-
-}
-.bottom center span{ 
-    color: #656565;
-}
-.bottom center a{ 
-    color: #55dd00;
-    text-decoration: none;
-}
-.bottom center a:hover{ 
-    text-decoration: underline;
-}
-.bottom center .fa-solid{ 
-    font-size: large;
-    height: 20px;
-    width: 20px;
-     
 }
 
 #icons{ 
@@ -377,6 +215,7 @@ h2{
 
 
 /* Mini Progressbar responsive */
+
 @media screen  and (max-width: 800px) {
 
 .SmallContainer{ 
@@ -388,6 +227,10 @@ h2{
         justify-content: center;
         flex-direction: column;
         
+}
+#icons{ 
+  position: absolute;
+  left: 90%;
 }
 .SmallContainer:hover{ 
     height: 25vh;
@@ -514,4 +357,187 @@ h2{
    }
 
    
+}
+
+
+/* footer */
+
+footer{ 
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+  background-color: var(--primary-color); 
+  font-family: 'Poppins', sans-serif;
+  border-radius: 30px 30px 0 0 ;
+  color: var(--secondary-color);
+}
+.hack{ 
+    font-family: 'poppins', sans-serif;
+    font-weight: 800;
+
+}
+.main-content{ 
+  display: flex;
+  
+}
+.main-content .box{ 
+  flex-basis: 50% ;
+  padding: 10px 20px;
+}
+.box h2{ 
+  font-size: 1.125ren;
+  font-weight: 600;
+  text-transform: uppercase;
+  
+}
+.box .content{ 
+  margin: 20px 0 0 0 ;
+  position: relative;
+}
+.box .content:before{ 
+  position: absolute;
+  content: '';
+  top: -10px;
+  height: 2px;
+  width: 100%;
+  background: var(--primary-color) ;
+}
+.box .content:after{ 
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 15%;
+  background:#f12020 ;
+  top: -10px;
+}
+.left .content p{ 
+  text-align: justify;
+}
+.left .content .social a{ 
+ padding : 0 2px;  
+}
+.left .content .social a span{ 
+  height: 40px;
+  width: 40px;
+  background-color: #272727c7;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: .5s ease;
+  color: white;
+}
+.left .content .social a span:hover{ 
+  background-color: #00f047;
+  color: #1877F2;
+}
+.center .content .fa-solid{
+  font-size: 1.6rem;
+  background-color: rgb(33, 33, 33);
+  color: var(--primary-color);
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  border-radius: 50%;
+  line-height: 40px;
+  transition: .5s ease;
+  cursor: pointer;
+  color: white;
+}
+.center .content .fa-solid:hover{ 
+background-color: #00f047;    
+
+}
+.center .content .place .fa-map-location-dot:hover{ 
+  color: rgb(255, 80, 80);
+}
+.center .content .text{ 
+  font-size: 1.05rem;
+  font-weight: 500;
+  padding-left: 10px;
+}
+.center .content .phone{
+   margin: 10px 0;
+
+}
+.center .content .fa-phone:hover{ 
+  color: rgb(0, 81, 255);
+}
+.center .content .fa-envelope:hover{ 
+  color: rgb(255, 72, 72);
+}
+.right form .msg{ 
+  margin-top: 10px;
+
+}
+.right form input, .right form textarea{ 
+  width: 100%;
+  font-size: 1.06rem;
+  background-color: #15151515;
+  padding-left: 10px;
+  border: 1px solid #222222;
+}
+.right form input:focus, 
+.right form textarea:focus{ 
+  outline-color:#3498db ;
+}
+.right form .text{ 
+  font-size: 1.06rem;
+  margin-bottom: 2px;
+  color: #656565;
+}
+.right form input{ 
+  height: 35px;
+}
+.right form .btn{ 
+  margin-top: 10px;
+}
+.right form .btn button{ 
+  height: 40px;
+  width: 50%;
+  border: none;
+  outline: none;
+  background: var(--tertiary-color);
+  color: var(--primary-color);
+  font-size: 1.06rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: .5s ease;
+}
+.right form .btn button:hover{ 
+  background: #00f047;
+  border-radius: 20px;
+}
+.bottom center{ 
+  padding: 5px;
+  font: 0.9rem;
+  background-color: #151515;
+
+}
+.bottom center span{ 
+  color: #656565;
+}
+.bottom center a{ 
+  color: #00f047;
+  text-decoration: none;
+}
+.bottom center a:hover{ 
+  text-decoration: underline ;
+  
+}
+
+@media  screen and (max-width:900px) {
+footer{ 
+  position: relative; 
+  bottom: 0px;
+
+}
+.main-content{ 
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.main-content{ 
+  margin: 5px 0;
+}
+
 }
