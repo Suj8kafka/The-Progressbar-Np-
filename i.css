@@ -542,7 +542,7 @@ footer{
 }
 
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 200px) {
   .progressInn{ 
     background-color: #00f047;
     position:relative; 
