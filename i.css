@@ -35,9 +35,10 @@
 #icons{ 
     width: 30px;
     cursor: pointer;
-    position: absolute;
+    position: fixed;
     left: 93%;
     top: 1%;
+    color: red;
 }
  #icons:hover{ 
 background-color: rgb(255, 204, 109);
@@ -229,8 +230,8 @@ h2{
         
 }
 #icons{ 
-  position: absolute;
-  left: 90%;
+  position: fixed;
+  
 }
 .SmallContainer:hover{ 
     height: 25vh;
