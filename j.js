@@ -100,6 +100,7 @@ const ProgressofDay= document.querySelector('.progressInn')
                      }   
                      //Website total Visitor Counter 
                      
+                     
                     }, 500);          
                     // Retrieve the visitor count from local storage or initialize it to 0
                     let count = localStorage.getItem('visitorCount') || 0;
@@ -136,3 +137,10 @@ const ProgressofDay= document.querySelector('.progressInn')
                     
                 }
         } 
+
+        //Nav bar 
+        window.addEventListener("scroll", function(){ 
+            var header= document.querySelector("header"); 
+            header.classList.toggle("sticky", window.scrollY>0);  
+        })
+
