@@ -250,150 +250,6 @@ h2{
 
 
 
-/* Mini Progressbar responsive */
-
-@media screen  and (max-width: 800px) {
-
-.SmallContainer{ 
-    height: 25vh;
-        background: var(--primary-color); 
-        color: whitesmoke;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        
-}
-#icons{ 
-  position: fixed;
-  
-}
-.SmallContainer:hover{ 
-    height: 25vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    border-radius: 70px;
-    transition: .5s;
-}
-.SmallContainer:hover> .progressLarge{ 
-    position: relative;
-    border-radius: 20px;
-    background-color: black;
-    width: 150px;
-    Height: 40px;
-    position: relative;
-    margin-bottom: 25px;
-}
-.SmallContainer:hover> .progressLarge .progressInn{ 
-    border-radius: 15px;
-    color: black;
-    position: absolute;
-        width: 144px;
-        height: 35px;
-        top: 5%;
-        left: 2%;
-}
-
-.container{ 
-    background: var(--primary-color);
-    color: wheat;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 70vh;
-}
-.container:hover{ 
-    background: rgb(255, 204, 66);
-    border-radius: 70px;
-    color: wheat;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 70vh;
-}
-.container:hover> .progress{
-    width: 350px;
-    height: 80px;
-    position: relative;
-    margin-bottom: 50px;
-    border-radius: 35px;
-}
-.container:hover> .progress .progress-inner{ 
-    position: absolute;
-    top: 5%;
-    width: 344px;
-    height: 70px;
-    left: 1%;
-    border-radius: 25px;
-   
-}
-
-    h2{ 
-        font-size: 30px;
-        line-height: 25px;
-
-    }
-    .small{ 
-        font-size: small;
-        margin-bottom: 5px;
-        font-size: 15px;
-    }
-    .progressLarge{ 
-        width: 150px;
-        height: 40px;
-        position: relative;
-        margin-bottom: 25px;
-    
-
-    }
-    .progressInn{ 
-        position: absolute;
-        width: 144px;
-        height: 35px;
-        top: 5%;
-        left: 2%;
-        
-    }
-
-    h1{ 
-        font-size: 35px;
-        line-height: 30px;
-    }
-    .large{ 
-        
-         font-size: bold;
-         margin-bottom: 10px;
-         font-size:17px;
-         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    }
-
-    .progress{ 
-        width: 350px;
-        height: 80px;
-        position: relative;
-        margin-bottom: 50px;
-  
-    }
-    .progress-inner{ 
-        position: absolute;
-        top: 5%;
-        width: 344px;
-        height: 70px;
-        left: 1%;
-        
-    }
-   html,body{ 
-    height: 100%; 
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-   }
-
-   
-}
 
 
 /* footer */
@@ -607,3 +463,148 @@ nav{
 
 
 }
+/* Mini Progressbar responsive */
+
+@media screen  and (max-width: 800px) {
+
+  .SmallContainer{ 
+      height: 25vh;
+          background: var(--primary-color); 
+          color: whitesmoke;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          
+  }
+  #icons{ 
+    position: fixed;
+    
+  }
+  .SmallContainer:hover{ 
+      height: 25vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      border-radius: 70px;
+      transition: .5s;
+  }
+  .SmallContainer:hover> .progressLarge{ 
+      position: relative;
+      border-radius: 20px;
+      background-color: black;
+      width: 150px;
+      Height: 40px;
+      position: relative;
+      margin-bottom: 25px;
+  }
+  .SmallContainer:hover> .progressLarge .progressInn{ 
+      border-radius: 15px;
+      color: black;
+      position: absolute;
+          width: 144px;
+          height: 35px;
+          top: 5%;
+          left: 2%;
+  }
+  
+  .container{ 
+      background: var(--primary-color);
+      color: wheat;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 70vh;
+  }
+  .container:hover{ 
+      background: rgb(255, 204, 66);
+      border-radius: 70px;
+      color: wheat;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 70vh;
+  }
+  .container:hover> .progress{
+      width: 350px;
+      height: 80px;
+      position: relative;
+      margin-bottom: 50px;
+      border-radius: 35px;
+  }
+  .container:hover> .progress .progress-inner{ 
+      position: absolute;
+      top: 5%;
+      width: 344px;
+      height: 70px;
+      left: 1%;
+      border-radius: 25px;
+     
+  }
+  
+      h2{ 
+          font-size: 30px;
+          line-height: 25px;
+  
+      }
+      .small{ 
+          font-size: small;
+          margin-bottom: 5px;
+          font-size: 15px;
+      }
+      .progressLarge{ 
+          width: 150px;
+          height: 40px;
+          position: relative;
+          margin-bottom: 25px;
+      
+  
+      }
+      .progressInn{ 
+          position: absolute;
+          width: 144px;
+          height: 35px;
+          top: 5%;
+          left: 2%;
+          
+      }
+  
+      h1{ 
+          font-size: 35px;
+          line-height: 30px;
+      }
+      .large{ 
+          
+           font-size: bold;
+           margin-bottom: 10px;
+           font-size:17px;
+           font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      }
+  
+      .progress{ 
+          width: 350px;
+          height: 80px;
+          position: relative;
+          margin-bottom: 50px;
+    
+      }
+      .progress-inner{ 
+          position: absolute;
+          top: 5%;
+          width: 344px;
+          height: 70px;
+          left: 1%;
+          
+      }
+     html,body{ 
+      height: 100%; 
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+     }
+  
+     
+  }
+  
