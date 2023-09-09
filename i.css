@@ -8,6 +8,41 @@
     
     
 }
+/* Nav bar Customization  */
+
+.Nav{ 
+  width: 100%;
+  height: 15vh;
+  background-color: var(--primary-color);
+  font-family: sans-serif;
+  position: relative;
+  transition: .5s ease;
+}
+.Nav a{ 
+  text-decoration: none;
+  color: var(--secondary-color);
+  position: relative;
+  top: 3%;
+  left: 1%;
+
+}
+nav ul li{ 
+  display: inline-block;
+  list-style-type: none;
+  margin: 10px 20px;
+  font-family: sans-serif;
+  font-weight: bolder;
+
+}
+nav ul li a{ 
+  text-decoration: none;
+  color: #606163;
+  transition: .5s ease;
+}
+nav ul li a:hover{ 
+  color: red;
+}
+
 
 :root{ 
     --primary-color: #ffffff;
@@ -542,7 +577,7 @@ footer{
 }
 
 }
-@media screen and (max-width: 200px) {
+@media screen and (max-width: 500px) {
   .progressInn{ 
     background-color: #00f047;
     position:relative; 
@@ -552,5 +587,23 @@ footer{
     left: 1%;
     transition: .5s ease;
 }
+
+}
+.hero{ 
+  height: 100vh;
+  width: 100%;
+  background-color: var(--primaryColor);
+  font-family: sans-serif;
+  position: relative;
+}
+nav{ 
+  width: 84%; 
+  margin: auto;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+
 
 }
