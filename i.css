@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Inter&family=Poppins:wght@300&family=Roboto&family=Ubuntu&family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap'); 
 
 
 *{ 
@@ -9,45 +10,54 @@
     
 }
 /* Nav bar Customization  */
-
-.Nav{ 
-  width: 100%;
+.Top1{ 
+  position: relative;
   height: 15vh;
-  background-color: var(--primary-color);
-  font-family: sans-serif;
-  position: relative;
-  transition: .5s ease;
+  background-color: var(--nav1);
+  border-radius: 0 0 30px 30px;
 }
-.Nav a{ 
-  text-decoration: none;
-  color: var(--secondary-color);
-  position: relative;
-  top: 3%;
-  left: 1%;
+
+header{ 
+    position: fixed;
+    top: 0;
+    left: -5%;
+    width: 115%;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+    padding: 40px 100px;
+    z-index: 100000;
+    
+}
+header .logo{ 
+    position: relative;
+    font-weight: 700;
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.6s;
+    font-family: 'Poppins', sans-serif;
+}
+header.sticky { 
+    padding: 5px 100px;
+    background: black;
+    
 
 }
-nav ul li{ 
-  display: inline-block;
-  list-style-type: none;
-  margin: 10px 20px;
-  font-family: sans-serif;
-  font-weight: bolder;
+header.sticky .logo { 
+    color: wheat;
+}
 
-}
-nav ul li a{ 
-  text-decoration: none;
-  color: #606163;
-  transition: .5s ease;
-}
-nav ul li a:hover{ 
-  color: red;
-}
 
 
 :root{ 
     --primary-color: #ffffff;
     --secondary-color :#373737;
     --tertiary-color:#373737;  
+    --nav1:wheat; 
+
 } 
 #visitors{ 
     color: var(--secondary-color);
@@ -64,10 +74,12 @@ nav ul li a:hover{
     --primary-color:#373737; 
     --secondary-color:rgb(255, 255, 255); 
     --tertiary-color:black; 
+    --nav1:#373737; 
     
 }
 
 #icons{ 
+  
     width: 30px;
     cursor: pointer;
     position: fixed;
@@ -81,6 +93,7 @@ border-radius: 20px;
 transition: .8s;
 }
 .container{ 
+  position: relative;
     width: 100%;
     background:var(--primary-color);   
     height: 75vh;
@@ -127,6 +140,7 @@ h1{
 
 /* Mini Progressbar  */
 .SmallContainer{ 
+   position: relative;
     width: 100%;
     background: var(--primary-color);
     height: 25vh;
