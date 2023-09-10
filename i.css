@@ -59,6 +59,7 @@ header.sticky {
     padding: 5px 100px;
     background: black;
     transition: .5s ease-in-out;
+    left: -2%;
 
 }
 header.sticky .logo { 
