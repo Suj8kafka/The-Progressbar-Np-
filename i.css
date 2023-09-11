@@ -619,17 +619,16 @@ footer{
 
 header{ 
     position: fixed;
-    top: 0;
+    top: 0%;
     left: -10%;
     width: 115%;
-    justify-content: space-between;
     align-items: center;
     transition: 0.5s;
     padding: 10px 100px;
     
 }
 #Logo1{ 
-  width: 70px;
+  width: 60px;
 }
 header .logo{
   position: relative; 
@@ -639,9 +638,14 @@ header .logo{
     font-size: 1.8rem;
     text-transform: uppercase;
     left: 10%;
+    letter-spacing: 1px;
 }
 header.sticky{ 
   left: -9%;
+
+}
+header.sticky #Logo1{ 
+  width: 50px;
 }
   
   }
