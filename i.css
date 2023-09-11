@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Inter&family=Poppins:wght@300&family=Roboto&family=Ubuntu&family=Varela+Round&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap'); 
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Inter&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto&family=Ubuntu&family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Inter&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&family=Ubuntu&family=Varela+Round&display=swap');
 
 
 *{ 
@@ -558,10 +559,12 @@ footer{
           font-weight: 900;
   
       }
-      .small{ 
+      .small { 
           font-size: small;
           margin-bottom: 5px;
+          font-weight: 900;
           font-size: 10px;
+          font-family: 'Roboto', sans-serif;
       }
       .progressLarge{ 
           width: 150px;
@@ -588,10 +591,10 @@ footer{
       }
       .large{ 
           
-           font-size: bold;
+           font-weight: 900;
            margin-bottom: 10px;
            font-size:17px;
-           font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+           font-family: 'Roboto', sans-serif; 
       }
   
       .progress{ 
