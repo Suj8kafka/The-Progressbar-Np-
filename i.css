@@ -552,7 +552,7 @@ footer{
   }
   
       h2{ 
-          font-size: 15px;
+          font-size: 10px;
           line-height: 25px;
           font-family: 'Poppins', sans-serif;
           font-weight: 900;
@@ -581,7 +581,7 @@ footer{
       }
   
       h1{ 
-          font-size: 30px;
+          font-size: 20px;
           font-weight: 900;
           line-height: 30px;
           font-family: 'Poppins', sans-serif;
@@ -635,7 +635,7 @@ header .logo{
     font-weight: 700;
     color: var(--secondary-color);
     text-decoration: none;
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     text-transform: uppercase;
     left: 10%;
     letter-spacing: 1px;
