@@ -23,7 +23,7 @@
 
 
 /* Nav bar Customization  */
-.Top1{ 
+#particles-js{ 
   position: relative;
   height: 15vh;
   background-color: var(--nav1);
