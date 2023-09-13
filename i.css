@@ -770,7 +770,7 @@ header.sticky #Logo1{
   .Messageb1{ 
     position: relative;
     bottom: 0px;
-    width: 100%;
+    width: auto;
     background-color: var(--primary-color); 
     font-family: 'Poppins', sans-serif;
     color: var(--secondary-color);
