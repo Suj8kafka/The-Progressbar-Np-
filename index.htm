@@ -3,14 +3,16 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
         <title>The Progressbar np </title>
         <link rel="stylesheet" href="i.css">
         <link rel="icon" href="SampleLogo108.png" type="image/png">
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-HGQ08F2P9V"></script>
         <script src="https://kit.fontawesome.com/780a37ec28.js" crossorigin="anonymous"></script>
-        <script src="k.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
     </head>
-    <body onload="">
+    <body >
         <div id="particles-js">
             
             <header>
@@ -93,17 +95,18 @@
         <div class="right box">
             <h2 class="hack">Contact Us</h2>
             <div class="content">
-                <form action="#">
+                <div class="alert">Your message has been sent</div>
+                <form id="contactForm">
                     <div class="email">
                         <div class="text">Email *</div>
-                        <input type="email" required>
+                        <input type="email" name="email" id="email" required>
                     </div>
                     <div class="msg">
                         <div class="text">Message *</div>
-                        <textarea name="" id="" cols="25" rows="2" required></textarea>
+                        <textarea name="message" id="message" cols="25" rows="2" required></textarea>
                     </div>
                     <div class="btn">
-                        <button type="submit">Send</button>
+                        <button type="submit">Submit</button>
                     </div>
                 </form>
             </div>
@@ -115,10 +118,14 @@
              <span class="fa-solid fa-copyright"></span> <span> 2021  All right reserved.</span>
         </center>
     </div>
-    </footer>
+
+
 </body>
 </html>
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
 <script src="j.js"></script>
+<script src="k.js"></script>
 </body>
 </html>
   
