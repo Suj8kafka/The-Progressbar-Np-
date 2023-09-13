@@ -74,6 +74,18 @@ header.sticky #Logo1{
   top: 0%;
 }
 
+.alert{
+  text-align: center;
+  padding:5px;
+  background:#c2ffd4;
+  font-family: 'Poppins', sans-serif;
+  color:rgb(0, 0, 0);
+  font-weight: 700;
+  margin-bottom:10px;
+  display:none;
+  border-radius: 20px;
+  transition: .3s ease;
+}
 
 :root{ 
     --primary-color: #ffffff;
