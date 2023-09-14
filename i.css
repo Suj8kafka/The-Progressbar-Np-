@@ -309,7 +309,7 @@ footer{
   width: 100%;
   background-color: var(--primary-color); 
   font-family: 'Poppins', sans-serif;
-  border-radius: 30px 30px 0 0 ;
+  border-radius: 45px ;
   color: var(--secondary-color);
 }
 .hack{ 
@@ -624,7 +624,9 @@ footer{
           left: 1%;
           
       }
-    /* Nav bar Customization  */
+    
+   
+ /* Nav bar Customization  */
 .Top1{ 
   position: relative;
   height: 10vh;
@@ -671,10 +673,13 @@ header.sticky #Logo1{
   }
 
 
+
+
   /* Notepad to store Messages in an instant  */
   .hidden {
     display: none;
   }
+  
   .Button1{ 
     display: block;
     margin: 20px;
@@ -745,7 +750,6 @@ header.sticky #Logo1{
     padding: 5px;
     border: none;
     border-radius: 5px;
-    background-color: #fff;
     /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
   }
   
@@ -769,10 +773,16 @@ header.sticky #Logo1{
   }
   .Messageb1{ 
     position: relative;
-    bottom: 0px;
-    width: auto;
-    background-color: var(--primary-color); 
+    /* background-color: var(--primary-color);  */
     font-family: 'Poppins', sans-serif;
     color: var(--secondary-color);
-    margin: 20px ;
+    padding: 20px;
+    /* Top right bottom left */
   }
+  .paragraph1{ 
+    position: relative;
+    background-color: var(--primary-color);
+    border-radius: 30px 30px 0 0 ;
+    height: auto;
+  }
+ 
