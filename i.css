@@ -73,6 +73,23 @@ header.sticky #Logo1{
   left: 1%;
   top: 0%;
 }
+header.sticky .links{ 
+  color: wheat;
+  left: 75%;
+}
+
+/* Current Day */
+header .links{ 
+  position: absolute;
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  left: 80%;
+  transition: .5s ease;
+}
+
+
 
 .alert{
   text-align: center;
@@ -360,6 +377,8 @@ footer{
 .left .content .social a span{ 
   height: 40px;
   width: 40px;
+  position: relative;
+  top: 10%;
   background-color: #272727c7;
   line-height: 40px;
   text-align: center;
@@ -466,6 +485,7 @@ background-color: #00f047;
   text-decoration: underline ;
   
 }
+
 
 @media  screen and (max-width:900px) {
 footer{ 
@@ -663,6 +683,10 @@ header.sticky{
 }
 header.sticky #Logo1{ 
   width: 50px;
+}
+header.sticky .links{ 
+  font-size: 12px;
+  left: 80%;
 }
   
   }
