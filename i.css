@@ -688,12 +688,16 @@ header.sticky .links{
   font-size: 12px;
   left: 80%;
 }
+header .links { 
+  font-size: 15px;
+}
   
   }
   @media screen and (max-width: 500px){ 
     header .logo{ 
       font-size: 1.4rem;
     }
+   
   }
 
 
