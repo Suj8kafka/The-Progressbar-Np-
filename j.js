@@ -2,7 +2,9 @@ const btnStart= document.querySelector('.btn-start');
 const timeSpan= document.querySelector('.time'); 
 const progressBar= document.querySelector('.progress-inner'); 
 const DayPerentage= document.querySelector('.percentageofDay'); 
-const ProgressofDay= document.querySelector('.progressInn')
+const ProgressofDay= document.querySelector('.progressInn');
+const Mosoftheyear= document.querySelector('.month1');
+const CurrDay= document.querySelector('.day1'); 
 
 
 //btnStart.addEventListener("click", ()=> { 
@@ -99,6 +101,25 @@ const ProgressofDay= document.querySelector('.progressInn')
                          
                      }   
                      //Website total Visitor Counter 
+                     //Nepali Date 
+                                 const days= [ 31, 30, 30, 30, 29, 29, 30, 30]; 
+                                const mos= [ 'Bhadra', 'Aswin', 'Kartik', 'Mangsir', 'Poush', 'Magh', 'Falgun', 'Chaitra']; 
+                                //  Synchronised day counter 
+                                var startdate= new Date ("2023-08-18"); 
+                                var currentdate= new Date(); 
+                                var timediff= Math.abs(currentdate.getTime()- startdate.getTime())
+                                var dayCount= Math.ceil(timediff/(1000*3600*24)); 
+                                // console.log(dayCount)
+                                // var dayCount = 35; 
+                                var Month=mos[0] ;  
+                                if(dayCount>31){ 
+                                    Month= mos[1]; 
+                                    dayCount-=31; 
+
+                                }
+                                Mosoftheyear.innerHTML= Month; 
+                                CurrDay.innerHTML= dayCount; 
+                                // console.log(Month, dayCount)
                      
                      
                     }, 500);          
@@ -143,4 +164,5 @@ const ProgressofDay= document.querySelector('.progressInn')
             var header= document.querySelector("header"); 
             header.classList.toggle("sticky", window.scrollY>0);  
         })
-
+   
+        
