@@ -28,6 +28,7 @@
   height: 15vh;
   background-color: var(--nav1);
   border-radius: 0 0 30px 30px;
+  transition: .5s ease;
 }
 
 header{ 
@@ -37,7 +38,7 @@ header{
     width: 115%;
     justify-content: space-between;
     align-items: center;
-    transition: 0.5s;
+    /* transition: .5s ease; */
     padding: 40px 100px;
     z-index: 100000;
     /* background-color: #151515; */
@@ -328,6 +329,7 @@ footer{
   font-family: 'Poppins', sans-serif;
   border-radius: 45px ;
   color: var(--secondary-color);
+  transition: .5s ease;
 }
 .hack{ 
     font-family: 'poppins', sans-serif;
@@ -660,7 +662,7 @@ header{
     left: -10%;
     width: 115%;
     align-items: center;
-    transition: 0.5s;
+    transition: .3s ease;
     padding: 10px 100px;
     
 }
@@ -812,5 +814,6 @@ header .links {
     background-color: var(--primary-color);
     border-radius: 30px  ;
     height: auto;
+    transition: .5s ease;
   }
  
