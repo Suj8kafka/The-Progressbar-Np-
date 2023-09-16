@@ -38,7 +38,7 @@ header{
     width: 115%;
     justify-content: space-between;
     align-items: center;
-    /* transition: .5s ease; */
+    transition: .5s ease;
     padding: 40px 100px;
     z-index: 100000;
     /* background-color: #151515; */
@@ -58,25 +58,27 @@ header .logo{
     
 }
 header.sticky { 
-    padding: 5px 100px;
+    padding: 25px 100px;
     background: black;
-    transition: .5s ease-in-out;
+    transition: .5s ease;
     left: -2%;
 
 }
 header.sticky .logo { 
     color: wheat;
-    transition: .5s ease;
+    /* transition: .5s ease; */
     left: 3%;
 }
 header.sticky #Logo1{ 
-  width: 60px;
+  width: 95px;
   left: 1%;
   top: 0%;
+  /* transition: .5s ease; */
 }
 header.sticky .links{ 
   color: wheat;
-  left: 75%;
+  left: 79%;
+  /* transition: .5s ease ; */
 }
 
 /* Current Day */
@@ -89,7 +91,6 @@ header .links{
   left: 80%;
   transition: .5s ease;
 }
-
 
 
 .alert{
