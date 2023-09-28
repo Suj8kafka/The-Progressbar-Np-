@@ -12,28 +12,28 @@
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
     </head>
-    <body onload="RealTimeClock()" >
+    <body onload="RealTimeClock(), getLocation()" >
+        
         <div id="particles-js">
-            
-            <header>
+        <header>
+            <script src="particles.js"></script>
+            <script src="app.js"></script>
                 <a href="https://the-progressbar-np.netlify.app/">
                     
                     <img src="SampleLogo108.png" id="Logo1" alt="">
                 </a>
                 <img src="moon.png" id="icons">
                 <a href="#" class="logo">The Progressbar Np</a>
-                <script src="particles.js"></script>
-                <script src="app.js"></script>
                 <a href="https://www.hamropatro.com/" class="links">
                     <p class="CurrMos"><span class="month1">Mos</span></p>
-                 <p class="CurrDays"> <span class="day1">Day</span></p>
-                <div id="clock">
-
-                </div>
+                    <p class="CurrDays"> <span class="day1">Day</span></p>
+                    <div id="clock">
+                        
+                    </div>
                 </a>
             </header>
-          
         </div>
+          
         
         <!-- Progressbar of the Day -->
         <div class="SmallContainer">
@@ -102,6 +102,8 @@
             <h2 class="hack">Contact Us</h2>
             <div class="content">
                 <div class="alert">Your message has been sent</div>
+                <!-- Contact Form linked with the database  -->
+                
                 <form id="contactForm">
                     <div class="email">
                         <div class="text">Email *</div>
@@ -150,6 +152,7 @@
 <script src="j.js"></script>
 <script src="k1.js"></script>
 <script src="k.js"></script>
+<script src="GeoLocations.js"></script>
 </body>
 </html>
   
