@@ -113,9 +113,9 @@ const CurrDay= document.querySelector('.day1');
                                 // var dayCount = 35; 
                                 var Month=mos[0] ;  
                                 if(dayCount>31){ 
-                                    Month= mos[1]; 
-                                    dayCount-=31; 
-
+                                    Month= mos[2]; 
+                                    dayCount-=60; 
+                                
                                 }
                                 Mosoftheyear.innerHTML= Month; 
                                 CurrDay.innerHTML= dayCount; 
@@ -179,7 +179,7 @@ const CurrDay= document.querySelector('.day1');
         minutes= ("0" + minutes).slice (-2); 
         seconds = ("0"+ seconds).slice(-2); 
         //Display Clock
-        document.getElementById('clock').innerHTML= hours +": "+ minutes+" :"+ seconds+" "+ amPm; 
+        document.getElementById('clock').innerHTML= hours +":"+ minutes+":"+ seconds+" "+ amPm; 
         var t= setTimeout(RealTimeClock, 1)
         }
         
