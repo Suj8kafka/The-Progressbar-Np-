@@ -88,7 +88,7 @@ const CurrDay= document.querySelector('.day1');
                      //let ActualProgressYears= (ruunningSecs/totalSecsYears) *1;
                      //console.log(ActualProgressYears);  
                      
-                     var icon= document.getElementById("icons"); 
+                     const icon= document.getElementById("icons"); 
                      icon.onclick=function(){ 
                         document.body.classList.toggle("dark-theme");
                         if(document.body.classList.contains("dark-theme")){ 
