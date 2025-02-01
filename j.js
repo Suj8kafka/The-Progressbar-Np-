@@ -89,17 +89,33 @@ const CurrDay= document.querySelector('.day1');
                      //console.log(ActualProgressYears);  
                      
                      const icon= document.getElementById("icons"); 
-                     icon.onclick=function(){ 
-                        document.body.classList.toggle("dark-theme");
-                        if(document.body.classList.contains("dark-theme")){ 
-                            icon.src="sun.png"; 
-                            
-                        }else
-                            { 
-                                icon.src="moon.png"; 
-                            }
-                         
-                     }   
+                  function enableDarkmode() { 
+                    document.body.classList.add("dark-theme"); 
+                    icon.src= "sun.png"; 
+                    localStorage.setItem("darkmode", "enabled"); //Save preference 
+
+                  }
+                  //Function to disable dark mode 
+                     function disableDarkmode (){ 
+                    document.body.classList.remove("dark-theme");
+                        icons.src= "moon.png"; 
+                        localStorage.setItem("darkMode", "disabled"); 
+                    
+                  }
+                  //Check LocalStorage for darkmode preference on page load 
+                  if(localStorage.getItem("darkmode")==="enabled"){ 
+                    enableDarkmode(); 
+                  }
+
+                  //Toggle Dark Mode 
+
+                  icons.onclick=function(){ 
+                    if (document.body.classList.contains("dark-theme")){
+                        disableDarkmode(); 
+                    }else {
+                        enableDarkmode(); 
+                    }
+                  }; 
                      //Website total Visitor Counter 
                      //Nepali Date 
                                  const days= [ 31, 30, 30, 30, 29, 29, 30, 30]; 
