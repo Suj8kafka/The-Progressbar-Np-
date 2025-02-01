@@ -123,7 +123,19 @@ header .links{
 
 }
 
- 
+
+
+
+
+
+/* Dark mode - Keep the same color on hover */
+.dark-theme .SmallContainer:hover, 
+.dark-theme .container:hover {
+  background-color: var(--primary-color) !important; /* Keep the dark theme color */
+  pointer-events: none;
+}
+
+
 .dark-theme{ 
     --primary-color:#373737; 
     --secondary-color:rgb(255, 255, 255); 
