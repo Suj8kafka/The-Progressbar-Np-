@@ -88,7 +88,9 @@ const CurrDay= document.querySelector('.day1');
                      //let ActualProgressYears= (ruunningSecs/totalSecsYears) *1;
                      //console.log(ActualProgressYears);  
                      
-                     const icon= document.getElementById("icons"); 
+                   
+                  const icon= document.getElementById("icons"); 
+                
                   function enableDarkmode() { 
                     document.body.classList.add("dark-theme"); 
                     icon.src= "sun.png"; 
@@ -98,8 +100,8 @@ const CurrDay= document.querySelector('.day1');
                   //Function to disable dark mode 
                      function disableDarkmode (){ 
                     document.body.classList.remove("dark-theme");
-                        icons.src= "moon.png"; 
-                        localStorage.setItem("darkMode", "disabled"); 
+                        icon.src= "moon.png"; 
+                        localStorage.setItem("darkmode", "disabled"); 
                     
                   }
                   //Check LocalStorage for darkmode preference on page load 
@@ -109,7 +111,7 @@ const CurrDay= document.querySelector('.day1');
 
                   //Toggle Dark Mode 
 
-                  icons.onclick=function(){ 
+                  icon.onclick=function(){ 
                     if (document.body.classList.contains("dark-theme")){
                         disableDarkmode(); 
                     }else {
