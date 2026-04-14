@@ -33,6 +33,44 @@ const bsYearStartAD = {
     2083: new Date(2026, 3, 14)
 };
 
+function getSortedBsYears() {
+    return Object.keys(bsYearStartAD)
+        .map(Number)
+        .sort((a, b) => a - b);
+}
+
+function getBsYearWindow(adDate) {
+    const years = getSortedBsYears();
+    let currentYear = years[0];
+
+    for (let i = 0; i < years.length; i++) {
+        if (adDate >= bsYearStartAD[years[i]]) {
+            currentYear = years[i];
+        } else {
+            break;
+        }
+    }
+
+    const startDate = bsYearStartAD[currentYear];
+    const nextYear = currentYear + 1;
+    let endDate = bsYearStartAD[nextYear];
+
+    if (!endDate && bsMonthData[currentYear]) {
+        const totalDays = bsMonthData[currentYear].reduce((a, b) => a + b, 0);
+        endDate = new Date(startDate.getTime() + totalDays * 24 * 60 * 60 * 1000);
+    }
+
+    if (!endDate) {
+        endDate = new Date(startDate.getTime() + 365 * 24 * 60 * 60 * 1000);
+    }
+
+    return {
+        year: currentYear,
+        startDate,
+        endDate
+    };
+}
+
 function getStartOfDay(d) {
     return new Date(d.getFullYear(), d.getMonth(), d.getDate());
 }
@@ -91,11 +129,12 @@ function updateDayProgress(now) {
     CheckColours(Number(rounded));
 }
 
-function updateYear2082Progress(now) {
-    const startOf2082 = bsYearStartAD[2082].getTime();
-    const startOf2083 = bsYearStartAD[2083].getTime();
-    const totalTime = startOf2083 - startOf2082;
-    let elapsedTime = now.getTime() - startOf2082;
+function updateYearProgress(now) {
+    const yearWindow = getBsYearWindow(now);
+    const startTime = yearWindow.startDate.getTime();
+    const endTime = yearWindow.endDate.getTime();
+    const totalTime = endTime - startTime;
+    let elapsedTime = now.getTime() - startTime;
 
     if (elapsedTime < 0) {
         elapsedTime = 0;
@@ -109,6 +148,9 @@ function updateYear2082Progress(now) {
 
     progressBar.style.width = rounded + '%';
     timeSpan.innerHTML = rounded + '%';
+    document.querySelectorAll('.year-label').forEach((el) => {
+        el.textContent = yearWindow.year;
+    });
     checkColors(Number(rounded));
 }
 
@@ -121,7 +163,7 @@ function updateBsMonthDay(now) {
 function updateAllProgress() {
     const now = new Date();
     updateDayProgress(now);
-    updateYear2082Progress(now);
+    updateYearProgress(now);
     updateBsMonthDay(now);
 }
 
