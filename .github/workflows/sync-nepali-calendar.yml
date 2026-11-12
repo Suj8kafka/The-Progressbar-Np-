@@ -38,6 +38,5 @@ jobs:
             echo "Calendar data is unchanged."
             exit 0
           fi
-          # Keep the existing live site unchanged while source updates are staged.
-          git commit -m "Update validated Hamro Patro calendar data [skip netlify]"
+          git commit -m "Update validated Hamro Patro calendar data"
           git push

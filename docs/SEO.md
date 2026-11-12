@@ -43,10 +43,12 @@ Do not add a robots.txt disallow rule for it.
 
 ## Verification and publication
 
-The source is being delivered with Netlify deployment-skipping commits to keep
-the existing site unchanged. Scheduled calendar commits also use `[skip netlify]`.
-When publication is intended, remove the calendar commit marker to enable future
-automatic data deployments through a connected Netlify production branch.
+Netlify should deploy `main` automatically and publish `public/`, with a blank
+base directory and build command. Scheduled calendar commits follow this same
+deployment flow. Avoid `[skip netlify]` and `[skip ci]` in production commit
+messages; either marker prevents deployment. After a skipped push, push a new
+commit without those markers or use **Deploys → Trigger deploy → Deploy site**
+in Netlify to publish the latest `main` revision.
 
 Run `npm test` for metadata, canonical/sitemap consistency, structured-data
 relationships, image dimensions, redirects and archive headers, alongside the
