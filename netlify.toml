@@ -1,0 +1,22 @@
+# Only the static site and its archive are published.
+[build]
+  publish = "public"
+
+# Consolidate legacy entry points into the homepage.
+[[redirects]]
+  from = "/index.htm"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
+
+# Keep historical source intact and browsable without indexing archive copies.
+[[headers]]
+  for = "/archive/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, follow"

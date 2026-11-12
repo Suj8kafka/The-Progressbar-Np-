@@ -1,0 +1,15 @@
+{
+  "name": "the-progressbar-np",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Make time visible: live day, week, month and Bikram Sambat year progress in Nepal time.",
+  "scripts": {
+    "dev": "node scripts/serve.cjs",
+    "test": "node --test tests/calendar.test.cjs tests/calendar-sync.test.cjs tests/integrations.test.cjs tests/seo.test.cjs",
+    "test:browser": "node scripts/browser-check.cjs",
+    "calendar:sync": "node scripts/sync-calendar.cjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

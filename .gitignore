@@ -1,0 +1,5 @@
+node_modules/
+artifacts/
+.DS_Store
+Thumbs.db
+public/assets/data/nepali-calendar.js.tmp

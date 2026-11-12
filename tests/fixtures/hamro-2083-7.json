@@ -1,0 +1,976 @@
+{
+  "path": "/en/calendar/2083/7",
+  "page": "calendar-month",
+  "data": {
+    "calendar": {
+      "initialMonths": [
+        {
+          "yearBs": 2083,
+          "monthBs": 6,
+          "daysInMonth": 31,
+          "days": [
+            {
+              "year_ad": 2026,
+              "month_ad": 9,
+              "day_ad": 13,
+              "year_bs": 2083,
+              "month_bs": 5,
+              "day_bs": 28,
+              "inMonth": false
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 9,
+              "day_ad": 14,
+              "year_bs": 2083,
+              "month_bs": 5,
+              "day_bs": 29,
+              "inMonth": false
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 9,
+              "day_ad": 15,
+              "year_bs": 2083,
+              "month_bs": 5,
+              "day_bs": 30,
+              "inMonth": false
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 9,
+              "day_ad": 16,
+              "year_bs": 2083,
+              "month_bs": 5,
+              "day_bs": 31,
+              "inMonth": false
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 9,
+              "day_ad": 17,
+              "year_bs": 2083,
+              "month_bs": 6,
+              "day_bs": 1,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 9,
+              "day_ad": 18,
+              "year_bs": 2083,
+              "month_bs": 6,
+              "day_bs": 2,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 9,
+              "day_ad": 19,
+              "year_bs": 2083,
+              "month_bs": 6,
+              "day_bs": 3,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 9,
+              "day_ad": 20,
+              "year_bs": 2083,
+              "month_bs": 6,
+              "day_bs": 4,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 9,
+              "day_ad": 21,
+              "year_bs": 2083,
+              "month_bs": 6,
+              "day_bs": 5,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 9,
+              "day_ad": 22,
+              "year_bs": 2083,
+              "month_bs": 6,
+              "day_bs": 6,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 9,
+              "day_ad": 23,
+              "year_bs": 2083,
+              "month_bs": 6,
+              "day_bs": 7,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 9,
+              "day_ad": 24,
+              "year_bs": 2083,
+              "month_bs": 6,
+              "day_bs": 8,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 9,
+              "day_ad": 25,
+              "year_bs": 2083,
+              "month_bs": 6,
+              "day_bs": 9,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 9,
+              "day_ad": 26,
+              "year_bs": 2083,
+              "month_bs": 6,
+              "day_bs": 10,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 9,
+              "day_ad": 27,
+              "year_bs": 2083,
+              "month_bs": 6,
+              "day_bs": 11,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 9,
+              "day_ad": 28,
+              "year_bs": 2083,
+              "month_bs": 6,
+              "day_bs": 12,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 9,
+              "day_ad": 29,
+              "year_bs": 2083,
+              "month_bs": 6,
+              "day_bs": 13,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 9,
+              "day_ad": 30,
+              "year_bs": 2083,
+              "month_bs": 6,
+              "day_bs": 14,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 10,
+              "day_ad": 1,
+              "year_bs": 2083,
+              "month_bs": 6,
+              "day_bs": 15,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 10,
+              "day_ad": 2,
+              "year_bs": 2083,
+              "month_bs": 6,
+              "day_bs": 16,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 10,
+              "day_ad": 3,
+              "year_bs": 2083,
+              "month_bs": 6,
+              "day_bs": 17,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 10,
+              "day_ad": 4,
+              "year_bs": 2083,
+              "month_bs": 6,
+              "day_bs": 18,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 10,
+              "day_ad": 5,
+              "year_bs": 2083,
+              "month_bs": 6,
+              "day_bs": 19,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 10,
+              "day_ad": 6,
+              "year_bs": 2083,
+              "month_bs": 6,
+              "day_bs": 20,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 10,
+              "day_ad": 7,
+              "year_bs": 2083,
+              "month_bs": 6,
+              "day_bs": 21,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 10,
+              "day_ad": 8,
+              "year_bs": 2083,
+              "month_bs": 6,
+              "day_bs": 22,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 10,
+              "day_ad": 9,
+              "year_bs": 2083,
+              "month_bs": 6,
+              "day_bs": 23,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 10,
+              "day_ad": 10,
+              "year_bs": 2083,
+              "month_bs": 6,
+              "day_bs": 24,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 10,
+              "day_ad": 11,
+              "year_bs": 2083,
+              "month_bs": 6,
+              "day_bs": 25,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 10,
+              "day_ad": 12,
+              "year_bs": 2083,
+              "month_bs": 6,
+              "day_bs": 26,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 10,
+              "day_ad": 13,
+              "year_bs": 2083,
+              "month_bs": 6,
+              "day_bs": 27,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 10,
+              "day_ad": 14,
+              "year_bs": 2083,
+              "month_bs": 6,
+              "day_bs": 28,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 10,
+              "day_ad": 15,
+              "year_bs": 2083,
+              "month_bs": 6,
+              "day_bs": 29,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 10,
+              "day_ad": 16,
+              "year_bs": 2083,
+              "month_bs": 6,
+              "day_bs": 30,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 10,
+              "day_ad": 17,
+              "year_bs": 2083,
+              "month_bs": 6,
+              "day_bs": 31,
+              "inMonth": true
+            }
+          ]
+        },
+        {
+          "yearBs": 2083,
+          "monthBs": 7,
+          "daysInMonth": 30,
+          "days": [
+            {
+              "year_ad": 2026,
+              "month_ad": 10,
+              "day_ad": 18,
+              "year_bs": 2083,
+              "month_bs": 7,
+              "day_bs": 1,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 10,
+              "day_ad": 19,
+              "year_bs": 2083,
+              "month_bs": 7,
+              "day_bs": 2,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 10,
+              "day_ad": 20,
+              "year_bs": 2083,
+              "month_bs": 7,
+              "day_bs": 3,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 10,
+              "day_ad": 21,
+              "year_bs": 2083,
+              "month_bs": 7,
+              "day_bs": 4,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 10,
+              "day_ad": 22,
+              "year_bs": 2083,
+              "month_bs": 7,
+              "day_bs": 5,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 10,
+              "day_ad": 23,
+              "year_bs": 2083,
+              "month_bs": 7,
+              "day_bs": 6,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 10,
+              "day_ad": 24,
+              "year_bs": 2083,
+              "month_bs": 7,
+              "day_bs": 7,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 10,
+              "day_ad": 25,
+              "year_bs": 2083,
+              "month_bs": 7,
+              "day_bs": 8,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 10,
+              "day_ad": 26,
+              "year_bs": 2083,
+              "month_bs": 7,
+              "day_bs": 9,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 10,
+              "day_ad": 27,
+              "year_bs": 2083,
+              "month_bs": 7,
+              "day_bs": 10,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 10,
+              "day_ad": 28,
+              "year_bs": 2083,
+              "month_bs": 7,
+              "day_bs": 11,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 10,
+              "day_ad": 29,
+              "year_bs": 2083,
+              "month_bs": 7,
+              "day_bs": 12,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 10,
+              "day_ad": 30,
+              "year_bs": 2083,
+              "month_bs": 7,
+              "day_bs": 13,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 10,
+              "day_ad": 31,
+              "year_bs": 2083,
+              "month_bs": 7,
+              "day_bs": 14,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 11,
+              "day_ad": 1,
+              "year_bs": 2083,
+              "month_bs": 7,
+              "day_bs": 15,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 11,
+              "day_ad": 2,
+              "year_bs": 2083,
+              "month_bs": 7,
+              "day_bs": 16,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 11,
+              "day_ad": 3,
+              "year_bs": 2083,
+              "month_bs": 7,
+              "day_bs": 17,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 11,
+              "day_ad": 4,
+              "year_bs": 2083,
+              "month_bs": 7,
+              "day_bs": 18,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 11,
+              "day_ad": 5,
+              "year_bs": 2083,
+              "month_bs": 7,
+              "day_bs": 19,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 11,
+              "day_ad": 6,
+              "year_bs": 2083,
+              "month_bs": 7,
+              "day_bs": 20,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 11,
+              "day_ad": 7,
+              "year_bs": 2083,
+              "month_bs": 7,
+              "day_bs": 21,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 11,
+              "day_ad": 8,
+              "year_bs": 2083,
+              "month_bs": 7,
+              "day_bs": 22,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 11,
+              "day_ad": 9,
+              "year_bs": 2083,
+              "month_bs": 7,
+              "day_bs": 23,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 11,
+              "day_ad": 10,
+              "year_bs": 2083,
+              "month_bs": 7,
+              "day_bs": 24,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 11,
+              "day_ad": 11,
+              "year_bs": 2083,
+              "month_bs": 7,
+              "day_bs": 25,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 11,
+              "day_ad": 12,
+              "year_bs": 2083,
+              "month_bs": 7,
+              "day_bs": 26,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 11,
+              "day_ad": 13,
+              "year_bs": 2083,
+              "month_bs": 7,
+              "day_bs": 27,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 11,
+              "day_ad": 14,
+              "year_bs": 2083,
+              "month_bs": 7,
+              "day_bs": 28,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 11,
+              "day_ad": 15,
+              "year_bs": 2083,
+              "month_bs": 7,
+              "day_bs": 29,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 11,
+              "day_ad": 16,
+              "year_bs": 2083,
+              "month_bs": 7,
+              "day_bs": 30,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 11,
+              "day_ad": 17,
+              "year_bs": 2083,
+              "month_bs": 8,
+              "day_bs": 1,
+              "inMonth": false
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 11,
+              "day_ad": 18,
+              "year_bs": 2083,
+              "month_bs": 8,
+              "day_bs": 2,
+              "inMonth": false
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 11,
+              "day_ad": 19,
+              "year_bs": 2083,
+              "month_bs": 8,
+              "day_bs": 3,
+              "inMonth": false
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 11,
+              "day_ad": 20,
+              "year_bs": 2083,
+              "month_bs": 8,
+              "day_bs": 4,
+              "inMonth": false
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 11,
+              "day_ad": 21,
+              "year_bs": 2083,
+              "month_bs": 8,
+              "day_bs": 5,
+              "inMonth": false
+            }
+          ]
+        },
+        {
+          "yearBs": 2083,
+          "monthBs": 8,
+          "daysInMonth": 29,
+          "days": [
+            {
+              "year_ad": 2026,
+              "month_ad": 11,
+              "day_ad": 15,
+              "year_bs": 2083,
+              "month_bs": 7,
+              "day_bs": 29,
+              "inMonth": false
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 11,
+              "day_ad": 16,
+              "year_bs": 2083,
+              "month_bs": 7,
+              "day_bs": 30,
+              "inMonth": false
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 11,
+              "day_ad": 17,
+              "year_bs": 2083,
+              "month_bs": 8,
+              "day_bs": 1,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 11,
+              "day_ad": 18,
+              "year_bs": 2083,
+              "month_bs": 8,
+              "day_bs": 2,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 11,
+              "day_ad": 19,
+              "year_bs": 2083,
+              "month_bs": 8,
+              "day_bs": 3,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 11,
+              "day_ad": 20,
+              "year_bs": 2083,
+              "month_bs": 8,
+              "day_bs": 4,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 11,
+              "day_ad": 21,
+              "year_bs": 2083,
+              "month_bs": 8,
+              "day_bs": 5,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 11,
+              "day_ad": 22,
+              "year_bs": 2083,
+              "month_bs": 8,
+              "day_bs": 6,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 11,
+              "day_ad": 23,
+              "year_bs": 2083,
+              "month_bs": 8,
+              "day_bs": 7,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 11,
+              "day_ad": 24,
+              "year_bs": 2083,
+              "month_bs": 8,
+              "day_bs": 8,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 11,
+              "day_ad": 25,
+              "year_bs": 2083,
+              "month_bs": 8,
+              "day_bs": 9,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 11,
+              "day_ad": 26,
+              "year_bs": 2083,
+              "month_bs": 8,
+              "day_bs": 10,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 11,
+              "day_ad": 27,
+              "year_bs": 2083,
+              "month_bs": 8,
+              "day_bs": 11,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 11,
+              "day_ad": 28,
+              "year_bs": 2083,
+              "month_bs": 8,
+              "day_bs": 12,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 11,
+              "day_ad": 29,
+              "year_bs": 2083,
+              "month_bs": 8,
+              "day_bs": 13,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 11,
+              "day_ad": 30,
+              "year_bs": 2083,
+              "month_bs": 8,
+              "day_bs": 14,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 12,
+              "day_ad": 1,
+              "year_bs": 2083,
+              "month_bs": 8,
+              "day_bs": 15,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 12,
+              "day_ad": 2,
+              "year_bs": 2083,
+              "month_bs": 8,
+              "day_bs": 16,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 12,
+              "day_ad": 3,
+              "year_bs": 2083,
+              "month_bs": 8,
+              "day_bs": 17,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 12,
+              "day_ad": 4,
+              "year_bs": 2083,
+              "month_bs": 8,
+              "day_bs": 18,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 12,
+              "day_ad": 5,
+              "year_bs": 2083,
+              "month_bs": 8,
+              "day_bs": 19,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 12,
+              "day_ad": 6,
+              "year_bs": 2083,
+              "month_bs": 8,
+              "day_bs": 20,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 12,
+              "day_ad": 7,
+              "year_bs": 2083,
+              "month_bs": 8,
+              "day_bs": 21,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 12,
+              "day_ad": 8,
+              "year_bs": 2083,
+              "month_bs": 8,
+              "day_bs": 22,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 12,
+              "day_ad": 9,
+              "year_bs": 2083,
+              "month_bs": 8,
+              "day_bs": 23,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 12,
+              "day_ad": 10,
+              "year_bs": 2083,
+              "month_bs": 8,
+              "day_bs": 24,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 12,
+              "day_ad": 11,
+              "year_bs": 2083,
+              "month_bs": 8,
+              "day_bs": 25,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 12,
+              "day_ad": 12,
+              "year_bs": 2083,
+              "month_bs": 8,
+              "day_bs": 26,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 12,
+              "day_ad": 13,
+              "year_bs": 2083,
+              "month_bs": 8,
+              "day_bs": 27,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 12,
+              "day_ad": 14,
+              "year_bs": 2083,
+              "month_bs": 8,
+              "day_bs": 28,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 12,
+              "day_ad": 15,
+              "year_bs": 2083,
+              "month_bs": 8,
+              "day_bs": 29,
+              "inMonth": true
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 12,
+              "day_ad": 16,
+              "year_bs": 2083,
+              "month_bs": 9,
+              "day_bs": 1,
+              "inMonth": false
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 12,
+              "day_ad": 17,
+              "year_bs": 2083,
+              "month_bs": 9,
+              "day_bs": 2,
+              "inMonth": false
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 12,
+              "day_ad": 18,
+              "year_bs": 2083,
+              "month_bs": 9,
+              "day_bs": 3,
+              "inMonth": false
+            },
+            {
+              "year_ad": 2026,
+              "month_ad": 12,
+              "day_ad": 19,
+              "year_bs": 2083,
+              "month_bs": 9,
+              "day_bs": 4,
+              "inMonth": false
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

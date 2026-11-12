@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title description">
+  <title id="title">The Progressbar Np by Sujeet Khadka</title>
+  <desc id="description">Make time visible. A Nepal time and Bikram Sambat calendar project by UI/UX designer Sujeet Khadka.</desc>
+  <rect width="1200" height="630" fill="#f7f7f2"/>
+  <g fill="#dc5a36">
+    <rect x="70" y="72" width="8" height="13" rx="2"/>
+    <rect x="82" y="64" width="8" height="21" rx="2"/>
+    <rect x="94" y="56" width="8" height="29" rx="2"/>
+  </g>
+  <rect x="106" y="48" width="8" height="37" rx="2" fill="#292c25"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="134" y="77" fill="#272923" font-size="25" font-weight="700">the progressbar <tspan fill="#dc5a36">np.</tspan></text>
+    <text x="70" y="156" fill="#76776f" font-size="13" letter-spacing="2">A LITTLE PERSPECTIVE ON TIME</text>
+    <text x="65" y="259" fill="#272923" font-size="88" font-weight="700" letter-spacing="-4">Make time</text>
+    <text x="65" y="354" fill="#dc5a36" font-size="88" font-weight="700" letter-spacing="-4">visible.</text>
+    <text x="70" y="411" fill="#66695f" font-size="22">Nepal time. Nepali dates. One moment at a time.</text>
+    <text x="70" y="546" fill="#272923" font-size="23">A project by <tspan font-weight="700">Sujeet Khadka</tspan></text>
+    <text x="70" y="580" fill="#76776f" font-size="18">UI/UX and visual designer · Nepal</text>
+    <text x="1130" y="565" fill="#66695f" font-size="18" text-anchor="end">sujeetkhadka.com.np</text>
+  </g>
+  <path d="M70 502H1130" stroke="#dcded3"/>
+  <rect x="735" y="126" width="395" height="326" rx="18" fill="#292c25"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="763" y="166" fill="#c4c8bd" font-size="11" letter-spacing="1.5">TIME, MADE VISIBLE</text>
+    <circle cx="1097" cy="161" r="4" fill="#b4c89c"/>
+    <text x="763" y="212" fill="#f7f7f2" font-size="18">One year. A little possibility.</text>
+  </g>
+  <defs>
+    <pattern id="ahead" width="22" height="24" patternUnits="userSpaceOnUse" x="763" y="238"><circle cx="6" cy="6" r="6" fill="#494d41"/></pattern>
+    <pattern id="passed" width="22" height="24" patternUnits="userSpaceOnUse" x="763" y="238"><circle cx="6" cy="6" r="6" fill="#d3a58a"/></pattern>
+  </defs>
+  <rect x="763" y="238" width="340" height="144" fill="url(#ahead)"/>
+  <rect x="763" y="238" width="340" height="72" fill="url(#passed)"/>
+  <rect x="763" y="310" width="164" height="24" fill="url(#passed)"/>
+  <circle cx="945" cy="316" r="7" fill="#f08a60"/>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#b7bdad">
+    <text x="763" y="414">BIKRAM SAMBAT</text>
+    <text x="1102" y="414" text-anchor="end">LIVE FROM NEPAL</text>
+  </g>
+</svg>
