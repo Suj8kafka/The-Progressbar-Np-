@@ -137,10 +137,11 @@ validation. Network, source-format or validation failures preserve the old file.
 The GitHub workflow runs daily at approximately **00:22 Nepal time** (18:37 UTC),
 with a manual dispatch option. It commits only `public/assets/data/nepali-calendar.js` after `npm test`
 passes. It must be pushed to the default branch, Actions must be enabled, and
-repository/branch permissions must allow the data commit. Netlify updates follow
-the normal deployment flow only if the site is connected to that Git branch.
-The tracked `netlify.toml` declares `public/` as the publish folder. Remote
-hosting settings and repository state have not been changed by this local work.
+repository/branch permissions must allow the data commit. Calendar commits use
+`[skip netlify]` so refreshes do not change the existing live deployment. Remove
+that marker from the workflow only when automatic publication is intended.
+The tracked `netlify.toml` declares `public/` as the publish folder. Netlify
+account settings are unchanged.
 
 This is a public-page integration rather than a documented calendar API. A source
 layout change fails visibly in GitHub Actions instead of silently accepting

@@ -43,6 +43,11 @@ Do not add a robots.txt disallow rule for it.
 
 ## Verification and publication
 
+The source is being delivered with Netlify deployment-skipping commits to keep
+the existing site unchanged. Scheduled calendar commits also use `[skip netlify]`.
+When publication is intended, remove the calendar commit marker to enable future
+automatic data deployments through a connected Netlify production branch.
+
 Run `npm test` for metadata, canonical/sitemap consistency, structured-data
 relationships, image dimensions, redirects and archive headers, alongside the
 calendar and integration checks. `npm run test:browser` checks creator links,

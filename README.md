@@ -103,9 +103,11 @@ and are excluded from search indexing through Netlify headers.
 See [the SEO guide](docs/SEO.md) for verification, publishing and Search Console
 steps. These local changes affect live search only after deployment and crawling.
 
-If Netlify is connected to the repository's production branch with automatic
-deploys enabled, calendar data commits follow that normal deployment flow.
-A local checkout or manually uploaded deployment does not update from Actions.
+Calendar refresh commits currently include `[skip netlify]`: they update the
+repository without changing the existing live deployment. Once publishing is
+approved, remove that marker from the calendar workflow to let subsequent data
+commits deploy through a connected Netlify production branch. A local checkout
+or manually uploaded deployment does not update from Actions.
 
 The footer's **Archive** link opens `/archive/v1/index.htm`. The old design and
 assets are preserved, its forms are read only, and `original.htm` retains the
