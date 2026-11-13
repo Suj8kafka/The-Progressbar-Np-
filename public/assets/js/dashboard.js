@@ -11,6 +11,9 @@
     const clockFormat = new Intl.DateTimeFormat('en-US', { timeZone: 'Asia/Kathmandu', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true });
     const dateFormat = new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Kathmandu', weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
     const shortDate = new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Kathmandu', day: 'numeric', month: 'short' });
+    const nepaliNumber = new Intl.NumberFormat('en', { numberingSystem: 'deva', useGrouping: false });
+    const monthFormat = new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Kathmandu', month: 'short' });
+    const milestoneDate = new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Kathmandu', day: 'numeric', month: 'short', year: 'numeric' });
     const DAY_MS = 86400000;
     let period = 'year';
     let renderedDay = '';
@@ -49,10 +52,60 @@
         const hours = Math.floor(minutes / 60);
         return hours + 'h ' + String(minutes % 60).padStart(2, '0') + 'm';
     }
+    function countdown(milliseconds) {
+        const minutes = Math.max(0, Math.ceil(milliseconds / 60000));
+        const days = Math.floor(minutes / 1440);
+        const hours = Math.floor(minutes % 1440 / 60);
+        return (days ? days + 'd ' : '') + hours + 'h ' + String(minutes % 60).padStart(2, '0') + 'm';
+    }
+    function renderMilestones(now, bs) {
+        const container = byId('calendar-milestones');
+        if (!container) return;
+        container.hidden = !bs;
+        if (!bs) return;
+        const month = calendar.getPeriodProgress(now, 'month');
+        const year = calendar.getBsYearWindow(now);
+        text('bs-current-month', calendar.monthNames[bs.monthIndex]);
+        text('bs-month-position', 'Day ' + bs.day + ' of ' + month.totalDays);
+        text('bs-month-remaining', month.remainingDays === 0 ? 'The last day of this month.' : month.remainingDays + (month.remainingDays === 1 ? ' full day' : ' full days') + ' after today');
+        setProgress(byId('bs-month-fill'), month.percentage);
+        text('bs-next-month', calendar.monthNames[(bs.monthIndex + 1) % 12] + ' 1');
+        text('bs-month-countdown', countdown(month.end - now.getTime()));
+        text('bs-next-month-date', shortDate.format(new Date(month.end)) + ' · 00:00 NPT');
+        text('bs-next-year', (bs.year + 1) + ' BS');
+        text('bs-year-countdown', countdown(year.end - now.getTime()));
+        text('bs-new-year-date', 'Baisakh 1 · ' + milestoneDate.format(new Date(year.end)));
+    }
+    function renderInternational(now, rebuildTimeline) {
+        const fill = byId('international-fill');
+        if (!fill) return;
+        const year = calendar.getGregorianProgress(now);
+        setProgress(fill, year.percentage);
+        text('international-percentage', year.percentage.toFixed(2));
+        text('international-year-number', year.year);
+        text('international-date', dateFormat.format(now));
+        text('international-position', 'Day ' + (year.elapsedDays + 1) + ' of ' + year.totalDays);
+        text('international-days-left', year.remainingDays + (year.remainingDays === 1 ? ' full day ahead' : ' full days ahead'));
+        if (!rebuildTimeline) return;
+        const timeline = byId('international-months');
+        timeline.replaceChildren();
+        for (let monthIndex = 0; monthIndex < 12; monthIndex++) {
+            const date = new Date(Date.UTC(year.year, monthIndex, 15));
+            const month = calendar.getGregorianProgress(date, 'month');
+            const label = document.createElement('span');
+            label.className = 'international-month';
+            label.style.flexGrow = month.totalDays;
+            label.style.flexBasis = '0';
+            label.textContent = monthFormat.format(date);
+            label.title = label.textContent + ' ' + year.year + ' · ' + month.totalDays + ' days';
+            if (monthIndex === year.monthIndex) label.setAttribute('aria-current', 'date');
+            timeline.appendChild(label);
+        }
+    }
     function renderPeriod(now, bs) {
         const result = calendar.getPeriodProgress(now, period);
         const name = period === 'month' && bs ? calendar.monthNames[bs.monthIndex] : 'the ' + period;
-        text('period-heading', period === 'month' && bs ? name + ', in motion' : 'The ' + period + ' so far');
+        text('period-heading', period === 'month' && bs ? name + ', in motion' : period === 'year' ? 'The Nepali year so far' : 'The ' + period + ' so far');
         text('period-name', name);
         text('hero-percentage', result ? result.percentage.toFixed(2) : '—');
         const heroTrack = byId('hero-progress');
@@ -165,7 +218,9 @@
             document.querySelector('.month1').textContent = calendar.monthNames[bs.monthIndex];
             document.querySelector('.day1').textContent = bs.day;
             text('date-year', bs.year); text('calendar-era', 'BS');
+            text('nepali-date-native', nepaliNumber.format(bs.day) + ' ' + calendar.monthNamesNe[bs.monthIndex] + ' ' + nepaliNumber.format(bs.year));
         } else {
+            text('nepali-date-native', '');
             const parts = new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Kathmandu', month: 'long', day: 'numeric', year: 'numeric' }).formatToParts(now);
             const part = (type) => parts.find((value) => value.type === type).value;
             document.querySelector('.month1').textContent = part('month');
@@ -178,6 +233,8 @@
         text('copyright-year', new Intl.DateTimeFormat('en', { timeZone: 'Asia/Kathmandu', year: 'numeric' }).format(now));
         renderPeriod(now, bs);
         const dateKey = dayWindow.start + ':' + (bs ? bs.year : 'unsupported');
+        renderMilestones(now, bs);
+        renderInternational(now, dateKey !== renderedDay);
         if (dateKey !== renderedDay) { renderedDay = dateKey; renderYearMap(now, bs); }
     }
     periodButtons.forEach((button) => button.addEventListener('click', () => {

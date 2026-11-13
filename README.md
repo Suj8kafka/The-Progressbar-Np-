@@ -2,7 +2,10 @@
 
 A live perspective on time, rooted in Nepal and the Bikram Sambat calendar.
 Includes day, week, Nepali month and year progress, an interactive year of dots,
-light/dark themes, a community board, and a contact form.
+light/dark themes, a community board, and a contact form. Nepal remains the focus:
+a subtle mountain motif and native date accompany BS month and New Year
+countdowns. A smaller Gregorian year timeline adds international context, also
+calculated in Nepal time.
 
 ## Project layout
 

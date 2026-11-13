@@ -6,7 +6,10 @@ This is a static, Nepal-focused time dashboard created by Sujeet Khadka. Its mai
 idea is to make passing time visible. The main display switches between the day,
 Sunday–Saturday week, Nepali month, and Bikram Sambat year. A day ring, interactive
 year of dots, Nepali date, clock, theme switch, contact form, and public community
-board complete the experience. The footer links to the archived original site.
+board complete the experience. A restrained mountain motif, a secondary Nepali
+script date, and month/New Year countdowns reinforce the Nepali identity without
+changing the primary English interface. A smaller Gregorian year timeline sits
+after the Nepali year map. The footer links to the archived original site.
 
 The browser performs all calendar calculations and rendering. Firebase Realtime
 Database supplies the two messaging features. There is no application server,
@@ -80,6 +83,14 @@ All displays use **Asia/Kathmandu**, rather than the machine's local timezone.
 Day calculations use a fixed modern Nepal offset of **UTC+05:45**; the clock and
 message timestamps use `Intl.DateTimeFormat`/`toLocaleString` with that timezone.
 The supported dates are modern, so historical timezone changes are outside scope.
+
+`getGregorianProgress(date, period)` accepts `year` (the default) or `month`.
+It uses the Gregorian year/month at Nepal midnight, includes leap days, and
+returns the same elapsed-day, full-days-ahead and percentage fields as the BS
+progress calculation. Gregorian progress stays available outside the BS table.
+The month timeline rebuilds on Nepal date changes; both progress bars and the
+BS month/New Year countdowns share the dashboard's existing single timer.
+Countdowns include the remainder of today; “full days ahead” excludes today.
 
 The BS lookup table contains 12 month lengths per year, in this order:
 Baisakh, Jestha, Asar, Shrawan, Bhadra, Aswin, Kartik, Mangsir, Poush, Magh,

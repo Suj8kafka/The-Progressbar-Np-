@@ -21,6 +21,10 @@
         'Baisakh', 'Jestha', 'Asar', 'Shrawan', 'Bhadra', 'Aswin',
         'Kartik', 'Mangsir', 'Poush', 'Magh', 'Falgun', 'Chaitra'
     ]);
+    const monthNamesNe = Object.freeze([
+        'वैशाख', 'जेठ', 'असार', 'साउन', 'भदौ', 'असोज',
+        'कार्तिक', 'मंसिर', 'पुस', 'माघ', 'फागुन', 'चैत'
+    ]);
     // Emergency fallback if the same-origin data script is unavailable. Normal
     // operation uses assets/data/nepali-calendar.js, refreshed by automation.
     const fallback = {
@@ -112,6 +116,19 @@
         const window = getBsYearWindow(date);
         return window ? percentage(timestamp(date) - window.start, window.end - window.start) : null;
     }
+    function getGregorianProgress(date, period = 'year') {
+        const now = timestamp(date);
+        const nepal = new Date(now + NEPAL_OFFSET_MS);
+        const year = nepal.getUTCFullYear();
+        const monthIndex = nepal.getUTCMonth();
+        if (period !== 'year' && period !== 'month') throw new RangeError('Unknown Gregorian progress period.');
+        const start = Date.UTC(year, period === 'year' ? 0 : monthIndex, 1) - NEPAL_OFFSET_MS;
+        const end = (period === 'year' ? Date.UTC(year + 1, 0, 1) : Date.UTC(year, monthIndex + 1, 1)) - NEPAL_OFFSET_MS;
+        const totalDays = (end - start) / DAY_MS;
+        const elapsedDays = Math.floor((now - start) / DAY_MS);
+        return { year, monthIndex, start, end, totalDays, elapsedDays,
+            remainingDays: totalDays - elapsedDays - 1, percentage: percentage(now - start, end - start) };
+    }
     function getPeriodWindow(date, period) {
         const now = timestamp(date);
         const dayStart = Math.floor((now + NEPAL_OFFSET_MS) / DAY_MS) * DAY_MS - NEPAL_OFFSET_MS;
@@ -148,7 +165,7 @@
         return '#00f047';
     }
     return Object.freeze({
-        monthNames, bsMonthData, getDayProgress, getBsYearWindow,
+        monthNames, monthNamesNe, bsMonthData, getDayProgress, getBsYearWindow, getGregorianProgress,
         getBsDate, getYearProgress, getProgressColor, getPeriodWindow, getPeriodProgress,
         dataInfo, createCalendar
     });

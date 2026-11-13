@@ -156,16 +156,43 @@ async function main() {
         assert.equal(await evaluate('ProgressCalendar.dataInfo.source'), 'Hamro Patro');
         assert.equal(await evaluate("document.getElementById('calendar-source').href"), 'https://www.hamropatro.com/en/calendar/2083/7');
         assert.match(await evaluate("document.getElementById('calendar-verified').textContent"), /^Checked /);
+        assert.match(await evaluate("document.getElementById('intro-heading').textContent"), /Nepali year/);
+        assert.match(await evaluate("document.getElementById('nepali-date-native').textContent"), /२६ कार्तिक २०८३/);
+        assert.equal(await evaluate("document.getElementById('calendar-milestones').hidden"), false);
+        assert.equal(await evaluate("document.getElementById('bs-current-month').textContent"), 'Kartik');
+        assert.equal(await evaluate("document.getElementById('bs-month-position').textContent"), 'Day 26 of 30');
+        assert.equal(await evaluate("document.getElementById('bs-next-month').textContent"), 'Mangsir 1');
+        assert.equal(await evaluate("document.getElementById('bs-month-countdown').textContent"), '4d 11h 26m');
+        assert.equal(await evaluate("document.getElementById('bs-new-year-date').textContent"), 'Baisakh 1 · 14 Apr 2027');
+        assert.equal(await evaluate("document.getElementById('international-position').textContent"), 'Day 316 of 365');
+        assert.equal(await evaluate("document.querySelectorAll('.international-month').length"), 12);
+        assert.equal(await evaluate("document.querySelector('.international-month[aria-current=date]').textContent"), 'Nov');
+        await evaluate(`window.__calendarTestNow = Date.parse('2027-01-01T00:00:00+05:45');
+            document.querySelector('[data-period="year"]').click()`);
+        assert.equal(await evaluate("document.getElementById('international-year-number').textContent"), '2027');
+        assert.equal(await evaluate("document.getElementById('international-percentage').textContent"), '0.00');
+        assert.equal(await evaluate("document.querySelector('.international-month[aria-current=date]').textContent"), 'Jan');
+        assert.equal(await evaluate("document.querySelector('.year-label').textContent"), '2083');
+        await evaluate(`window.__calendarTestNow = Date.parse('2028-02-29T12:00:00+05:45');
+            document.querySelector('[data-period="year"]').click()`);
+        assert.equal(await evaluate("document.getElementById('international-position').textContent"), 'Day 60 of 366');
+        assert.equal(await evaluate("document.getElementById('international-percentage').textContent"), '16.26');
         await evaluate(`window.__calendarTestNow = Date.parse('2027-04-14T00:00:00+05:45');
             document.querySelector('[data-period="year"]').click()`);
         assert.equal(await evaluate("document.querySelector('.year-label').textContent"), '2084');
         assert.equal(await evaluate("document.getElementById('hero-percentage').textContent"), '0.00');
         assert.equal(await evaluate("document.querySelectorAll('.year-dot.current').length"), 1);
         assert.equal(await evaluate("document.getElementById('day-of-year').textContent"), '1');
+        assert.equal(await evaluate("document.getElementById('bs-current-month').textContent"), 'Baisakh');
+        assert.equal(await evaluate("document.getElementById('bs-next-year').textContent"), '2085 BS');
+        assert.equal(await evaluate("document.getElementById('international-percentage').textContent"), '28.22');
         await evaluate(`window.__calendarTestNow = Date.parse('2030-01-01T12:00:00+05:45');
             document.querySelector('[data-period="year"]').click()`);
         assert.equal(await evaluate("document.getElementById('calendar-status').hidden"), false);
         assert.equal(await evaluate("document.querySelectorAll('.year-dot').length"), 0);
+        assert.equal(await evaluate("document.getElementById('calendar-milestones').hidden"), true);
+        assert.equal(await evaluate("document.getElementById('international-position').textContent"), 'Day 1 of 365');
+        assert.equal(await evaluate("document.querySelector('.international-track').getAttribute('aria-valuenow')"), '0.13699');
         await evaluate("document.querySelector('[data-period=day]').click()");
         assert.equal(await evaluate("document.getElementById('hero-percentage').textContent"), '50.00');
         await evaluate(`window.__calendarTestNow = Date.parse('2026-11-12T12:34:56+05:45');
@@ -221,7 +248,7 @@ async function main() {
         const errors = events.filter((event) => event.method === 'Runtime.exceptionThrown');
         assert.deepEqual(errors, []);
         console.log(JSON.stringify({ desktop, dots, checkedWidths: [320, 375, 480, 768, 1024, 1440], javascriptErrors: errors.length,
-            checked: ['creator attribution and portfolio links', 'all four progress periods', 'month highlighting', 'calendar source attribution', '2084 New Year rollover', 'unsupported dates', 'missing calendar data fallback', 'offline services', 'theme persistence', 'keyboard toggle', 'board expansion', 'reduced motion', 'public directory serving', 'legacy bookmark redirect', 'archive noindex and return link'],
+            checked: ['Nepali identity and native date', 'BS month and New Year countdowns', 'Gregorian month timeline', 'Gregorian New Year at Nepal midnight', 'Gregorian leap day', 'creator attribution and portfolio links', 'all four progress periods', 'month highlighting', 'calendar source attribution', '2084 New Year rollover', 'unsupported dates with Gregorian progress', 'missing calendar data fallback', 'offline services', 'theme persistence', 'keyboard toggle', 'board expansion', 'reduced motion', 'public directory serving', 'legacy bookmark redirect', 'archive noindex and return link'],
             screenshots: ['artifacts/desktop.png', 'artifacts/mobile.png', 'artifacts/dark.png'] }, null, 2));
     } finally {
         if (ws) ws.close();

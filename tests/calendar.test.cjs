@@ -58,7 +58,7 @@ test('unsupported dates are explicit rather than clamped to a false BS date', ()
 });
 
 test('calendar results do not depend on the machine timezone or daylight saving', () => {
-    const script = "const c=require('./public/assets/js/calendar.js');const d=new Date('2026-11-11T18:15:00Z');process.stdout.write(JSON.stringify([c.getDayProgress(d),c.getBsDate(d),c.getYearProgress(d)]));";
+    const script = "const c=require('./public/assets/js/calendar.js');const d=new Date('2026-11-11T18:15:00Z');process.stdout.write(JSON.stringify([c.getDayProgress(d),c.getBsDate(d),c.getYearProgress(d),c.getGregorianProgress(d)]));";
     const outputs = ['UTC', 'America/New_York', 'Asia/Kathmandu', 'Pacific/Auckland'].map((TZ) =>
         execFileSync(process.execPath, ['-e', script], { cwd: require('node:path').resolve(__dirname, '..'), env: { ...process.env, TZ }, encoding: 'utf8' }));
     outputs.forEach((output) => assert.equal(output, outputs[0]));
@@ -74,6 +74,41 @@ test('progress colors include exact 50% and 80% boundaries', () => {
 test('invalid dates fail clearly', () => {
     assert.throws(() => calendar.getDayProgress(new Date(NaN)), RangeError);
     assert.throws(() => calendar.getBsDate(new Date(NaN)), RangeError);
+    assert.throws(() => calendar.getGregorianProgress(new Date(NaN)), RangeError);
+});
+
+test('the Gregorian year rolls over at Nepal midnight, independently of the BS year', () => {
+    const before = calendar.getGregorianProgress(new Date('2026-12-31T23:59:59.999+05:45'));
+    assert.equal(before.year, 2026);
+    assert.equal(before.elapsedDays, 364);
+    assert.equal(before.remainingDays, 0);
+    assert.ok(before.percentage > 99.999);
+    const now = new Date('2026-12-31T18:15:00Z');
+    const next = calendar.getGregorianProgress(now);
+    assert.equal(next.year, 2027);
+    assert.equal(next.percentage, 0);
+    assert.equal(next.elapsedDays, 0);
+    assert.equal(next.remainingDays, 364);
+    assert.equal(calendar.getBsDate(now).year, 2083);
+    assert.equal(new Date(next.start).toISOString(), '2026-12-31T18:15:00.000Z');
+});
+
+test('Gregorian progress includes leap days and actual month lengths in Nepal time', () => {
+    const leapDay = new Date('2028-02-29T12:00:00+05:45');
+    const leap = calendar.getGregorianProgress(leapDay);
+    assert.equal(leap.totalDays, 366);
+    assert.equal(leap.elapsedDays, 59);
+    assert.equal(leap.percentage, 59.5 / 366 * 100);
+    const february = calendar.getGregorianProgress(leapDay, 'month');
+    assert.equal(february.totalDays, 29);
+    assert.equal(february.remainingDays, 0);
+    assert.equal(february.percentage, 28.5 / 29 * 100);
+    const march = calendar.getGregorianProgress(new Date('2028-02-29T18:15:00Z'), 'month');
+    assert.equal(march.totalDays, 31);
+    assert.equal(march.percentage, 0);
+    assert.equal(calendar.getGregorianProgress(new Date('2027-02-28T12:00:00+05:45'), 'month').totalDays, 28);
+    assert.equal(calendar.getGregorianProgress(new Date('2030-01-01T12:00:00+05:45')).year, 2030);
+    assert.throws(() => calendar.getGregorianProgress(leapDay, 'week'), RangeError);
 });
 
 test('Nepali weeks begin on Sunday at Nepal midnight, including Gregorian year changes', () => {
