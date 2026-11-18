@@ -8,7 +8,7 @@
     "name": "Hamro Patro",
     "url": "https://www.hamropatro.com/en/calendar"
   },
-  "checkedAt": "2026-11-13T23:51:13.849Z",
+  "checkedAt": "2026-11-18T01:17:58.160Z",
   "checkedYears": [
     2082,
     2083,
